@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "no-var": "error",
+    "strict": ["error", "global"],
+    "eqeqeq": "warn",
+    "prefer-destructuring": ["warn", { "object": true, "array": false }],
+    "require-await": "warn",
+    "spaced-comment": ["warn", "always"],
+    "func-style": ["warn", "expression"]
+  }
+}
