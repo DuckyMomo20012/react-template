@@ -78,3 +78,6 @@ Follow instructions: https://storybook.js.org/addons/@storybook/addon-postcss
 # 2. TODO:
 
 - [ ] Add npm script for eslint.
+- [ ] Add Docker, Jenkins for project.
+- [ ] Add react query?
+- [ ] Add redux?
