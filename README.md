@@ -7,7 +7,7 @@ My react app template for practicing with many features:
 - React router v6
 - Bundle: Vite
 - Building UI components with Storybook
-- Tailwind
+- Windicss
 - ESLint
 - Prettier
 
@@ -36,26 +36,28 @@ yarn add react-router-dom@latest
 ## 1.5. Install more packages (dev dependencies):
 - Prettier: prettier
 - Eslint: eslint, eslint-plugin-react
-- Tailwind: tailwindcss, postcss, autoprefixer
+- ~~Tailwind: tailwindcss, postcss, autoprefixer~~
 - Storybook: @storybook/addon-postcss
 ```console
-yarn add --dev prettier eslint eslint-plugin-react tailwindcss postcss autoprefixer @storybook/addon-postcss
+yarn add --dev prettier eslint eslint-plugin-react @storybook/addon-postcss
 ```
 
 ## 1.6. Install tailwindcss:
-- Create tailwind config file:
+- Install package:
 
 ```console
-npx tailwindcss init
+yarn add --dev vite-plugin-windicss windicss
 ```
 
-- Follow instructions from tailwind documentation:
+- Follow instructions from windicss documentation:
 
-https://tailwindcss.com/docs/guides/vite
+https://windicss.org/integrations/vite.html
 
-https://tailwindcss.com/docs/installation/using-postcss
+- Install "sort class" plugin for windicss (from tailwindcss):
 
-> NOTE: Remember to create a postcss.config.js file
+```console
+yarn add --dev prettier-plugin-tailwindcss
+```
 
 ## 1.7. Install storybook:
 - Create storybook:
@@ -70,9 +72,6 @@ Edit npm script:
 ```json
 "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
 ```
-- Fix storybook error **"PostCSS plugin tailwindcss requires PostCSS 8"**:
-
-Follow instructions: https://storybook.js.org/addons/@storybook/addon-postcss
 
 
 # 2. TODO:

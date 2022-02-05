@@ -13,5 +13,6 @@
       }
     }
   ],
-  "htmlWhitespaceSensitivity": "strict"
+  "htmlWhitespaceSensitivity": "strict",
+  "tailwindConfig": "./windi.config.js"
 }
