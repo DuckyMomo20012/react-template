@@ -6,6 +6,7 @@ My react app template for practicing with many features:
 
 - React
 - React router v6
+- React query
 - Bundle: Vite
 - Building UI components with Storybook
 - Windicss
@@ -87,7 +88,7 @@ Edit npm script:
 
 # 2. TODO:
 
-- [ ] Add npm script for eslint.
+- [x] Add npm script for eslint.
+- [x] Add react query
 - [ ] Add Docker, Jenkins for project.
-- [ ] Add react query?
 - [ ] Add redux?

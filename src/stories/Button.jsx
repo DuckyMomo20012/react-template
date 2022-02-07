@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
 
@@ -13,7 +12,7 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
     <button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' '
+        ' ',
       )}
       style={backgroundColor && { backgroundColor }}
       {...props}

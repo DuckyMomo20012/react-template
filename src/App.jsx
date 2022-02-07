@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import logo from './logo.svg';
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -20,7 +20,7 @@ function App() {
           <button
             className="rounded bg-sky-400 p-2"
             type="button"
-            onClick={() => setCount(count => count + 1)}
+            onClick={() => setCount((prevCount) => prevCount + 1)}
           >
             count is: {count}
           </button>
@@ -50,6 +50,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
