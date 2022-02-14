@@ -5,6 +5,19 @@ import { MantineProvider } from '@mantine/core';
 // Mantine default theme:
 // https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts
 const CustomMantineProvider = ({ children }) => {
+  const blueGray = [
+    '#f8fafc',
+    '#f1f5f9',
+    '#e2e8f0',
+    '#cbd5e1',
+    '#94a3b8',
+    '#64748b',
+    '#475569',
+    '#334155',
+    '#1e293b',
+    '#0f172a',
+  ];
+
   return (
     <MantineProvider
       theme={{
@@ -232,18 +245,7 @@ const CustomMantineProvider = ({ children }) => {
             '#27272a',
             '#18181b',
           ],
-          'blue-gray': [
-            '#f8fafc',
-            '#f1f5f9',
-            '#e2e8f0',
-            '#cbd5e1',
-            '#94a3b8',
-            '#64748b',
-            '#475569',
-            '#334155',
-            '#1e293b',
-            '#0f172a',
-          ],
+          'blue-gray': blueGray,
           'cool-gray': [
             '#f9fafb',
             '#f3f4f6',
@@ -292,18 +294,7 @@ const CustomMantineProvider = ({ children }) => {
             '#dee2e6',
             '#dde1e3',
           ],
-          dark: [
-            '#4a4a4a',
-            '#3c3c3c',
-            '#323232',
-            '#2d2d2d',
-            '#222222',
-            '#1f1f1f',
-            '#1c1c1e',
-            '#1b1b1b',
-            '#181818',
-            '#0f0f0f',
-          ],
+          dark: blueGray,
         },
         fontFamily:
           'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
@@ -312,6 +303,15 @@ const CustomMantineProvider = ({ children }) => {
             'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
         },
         lineHeight: 1,
+        shadows: {
+          sm: '0 1px 2px 0 rgb(0 0 0/0.05)',
+          md: '0 4px 6px -1px rgb(0 0 0/0.1),0 2px 4px -2px rgb(0 0 0/0.1)',
+          lg: '0 10px 15px -3px rgb(0 0 0/0.1),0 4px 6px -4px rgb(0 0 0/0.1)',
+          xl: '0 20px 25px -5px rgb(0 0 0/0.1),0 8px 10px -6px rgb(0 0 0/0.1)',
+          '2xl': '0 25px 50px -12px rgb(0 0 0/0.25)',
+          inner: 'inset 0 2px 4px 0 rgb(0 0 0/0.05)',
+          none: '0 0 #0000',
+        },
       }}
     >
       {children}
