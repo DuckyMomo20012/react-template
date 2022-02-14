@@ -12,6 +12,7 @@ My react app template for practicing with many features:
 - Windicss
 - ESLint
 - Prettier
+- UI Component Library: Mantine
 
 # 1. Create template from scratch:
 
@@ -86,9 +87,15 @@ Edit npm script:
 "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
 ```
 
+## 1.8. Install Mantine:
+
+```console
+yarn add @mantine/hooks @mantine/core
+```
+
 # 2. TODO:
 
 - [x] Add npm script for eslint.
 - [x] Add react query
+- [x] Add ~~redux?~~ redux-toolkit
 - [ ] Add Docker, Jenkins for project.
-- [ ] Add redux?

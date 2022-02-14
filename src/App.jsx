@@ -1,3 +1,4 @@
+import { Button } from '@mantine/core';
 import { useState } from 'react';
 import logo from './logo.svg';
 
@@ -9,28 +10,30 @@ const App = () => {
       <header className="bg-dark-300 flex min-h-[100vh] flex-col items-center justify-center text-lg">
         <img
           src={logo}
-          className="animate-flipInX animate-duration-1000 animate-loop pointer-events-none h-[40vmin]"
+          className="animate-flipInX animate-loop animate-duration-1000 pointer-events-none h-[40vmin]"
           alt="logo"
         />
+        <p className="block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"></p>
         <h1 className="text-light-400 text-3xl font-bold underline">
           Happy New Year!
         </h1>
         <p className="text-light-400">Hello Vite + React!</p>
         <p className="text-light-400">
-          <button
-            className="rounded bg-sky-400 p-2"
+          <Button
+            // className="rounded bg-sky-400 p-2"
+            color="purple"
             type="button"
             onClick={() => setCount((prevCount) => prevCount + 1)}
           >
             count is: {count}
-          </button>
+          </Button>
         </p>
         <p className="text-light-400">
           Edit <code>App.jsx</code> and save to test HMR updates.
         </p>
         <p>
           <a
-            className="text-3xl text-sky-400 underline decoration-wavy"
+            className="text-2xl text-sky-400 underline decoration-wavy"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -39,7 +42,7 @@ const App = () => {
           </a>
           {' | '}
           <a
-            className="text-3xl text-sky-400 underline decoration-wavy"
+            className="text-2xl text-sky-400 underline decoration-wavy"
             href="https://vitejs.dev/guide/features.html"
             target="_blank"
             rel="noopener noreferrer"
