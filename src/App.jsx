@@ -18,16 +18,14 @@ const App = () => {
           Happy New Year!
         </h1>
         <p className="text-light-400">Hello Vite + React!</p>
-        <p className="text-light-400">
-          <Button
-            // className="rounded bg-sky-400 p-2"
-            color="purple"
-            type="button"
-            onClick={() => setCount((prevCount) => prevCount + 1)}
-          >
-            count is: {count}
-          </Button>
-        </p>
+        <Button
+          // className="rounded bg-sky-400 p-2"
+          color="purple"
+          type="button"
+          onClick={() => setCount((prevCount) => prevCount + 1)}
+        >
+          count is: {count}
+        </Button>
         <p className="text-light-400">
           Edit <code>App.jsx</code> and save to test HMR updates.
         </p>

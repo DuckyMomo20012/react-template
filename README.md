@@ -4,15 +4,53 @@
 
 My react app template for practicing with many features:
 
-- React
-- React router v6
-- React query
-- Bundle: Vite
-- Building UI components with Storybook
-- Windicss
-- ESLint
-- Prettier
-- UI Component Library: Mantine
+<table>
+<tbody>
+<tr>
+<td> Framework </td> <td> React </td> <td> v17 </td>
+</tr>
+
+<tr>
+<td> Routing </td> <td> React-router </td> <td> v6 </td>
+</tr>
+
+<tr>
+<td> State Management </td> <td> Redux-toolkit </td> <td> v1 </td>
+</tr>
+
+<tr>
+<td> Data fetching </td> <td> React-query </td> <td> v3 </td>
+</tr>
+
+<tr>
+<td> Component Styling </td> <td> WindiCSS </td> <td> v3 </td>
+</tr>
+
+<tr>
+<td> UI Components Library </td> <td> Mantine </td> <td> v3 </td>
+</tr>
+
+<tr>
+<td> UI Component Visualizer </td> <td> Storybook </td> <td> v6 (@storybook/react)</td>
+</tr>
+
+<tr>
+<td> Lint tool </td> <td> ESLint </td> <td> v8 </td>
+</tr>
+
+<tr>
+<td> Formatter </td> <td> Prettier </td> <td> v2 </td>
+</tr>
+
+<tr>
+<td> Build tool </td> <td> Vite </td> <td> v2 </td>
+</tr>
+
+<tr>
+<td> Icons </td> <td> React Icons </td> <td> v4 </td>
+</tr>
+</tbody>
+</table>
 
 # 1. Create template from scratch:
 
@@ -93,6 +131,31 @@ Edit npm script:
 yarn add @mantine/hooks @mantine/core
 ```
 
+> NOTE: Apply **WindiCSS configs** to Color, font family, breakpoints, headings,
+> line height configs.
+
+<table>
+<tbody>
+<tr>
+<td> Config </td> <td> Mantine's default </td> <td> Changes </td>
+</tr>
+<tr>
+<td> theme.colors </td> <td> https://mantine.dev/theming/extend-theme/#default-colors </td> <td> https://windicss.org/utilities/general/colors.html </td>
+</tr>
+<tr>
+<td> theme.fontFamily </td> <td> <a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L19">'-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji'</a> </td> <td> <a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L530">'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji'</a> </td>
+</tr>
+<tr>
+<td> theme.lineHeight </td> <td> <a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L17">1.55</a> </td> <td> <a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L797">1</a> </td>
+</tr>
+<tr>
+<td> theme.headings.fontFamily </td> <td> <a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L66">'-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji'</a> </td> <td> <a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L530">'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji'</a> </td>
+</tr>
+<tr>
+<td> theme.breakpoints </td> <td> <a href="https://mantine.dev/theming/extend-theme/#breakpoints">xs: 576, sm: 768, md: 992, lg: 1200, xl: 1400,</a> </td> <td> <a href="https://windicss.org/features/responsive-design.html#breakpoints">sm: 640, md: 768, lg: 1024, xl: 1280, '2xl': 1536,</a> </td>
+</tr>
+</tbody>
+</table>
 # 2. TODO:
 
 - [x] Add npm script for eslint.

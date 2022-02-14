@@ -1,10 +1,20 @@
 import { MantineProvider } from '@mantine/core';
-import { colors as windiColors } from 'windicss/colors';
 
+// Windi base config:
+// https://github.com/windicss/windicss/blob/main/src/config/base.ts
+// Mantine default theme:
+// https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts
 const CustomMantineProvider = ({ children }) => {
   return (
     <MantineProvider
       theme={{
+        breakpoints: {
+          sm: 640,
+          md: 768,
+          lg: 1024,
+          xl: 1280,
+          '2xl': 1536,
+        },
         colors: {
           pink: [
             '#fdf2f8',
@@ -295,6 +305,13 @@ const CustomMantineProvider = ({ children }) => {
             '#0f0f0f',
           ],
         },
+        fontFamily:
+          'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+        headings: {
+          fontFamily:
+            'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+        },
+        lineHeight: 1,
       }}
     >
       {children}
@@ -303,4 +320,3 @@ const CustomMantineProvider = ({ children }) => {
 };
 
 export { CustomMantineProvider };
-
