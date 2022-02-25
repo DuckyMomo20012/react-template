@@ -58,8 +58,8 @@ My react app template for practicing with many features:
         </tr>
         <tr>
             <td> Icons </td>
-            <td> React Icons </td>
-            <td> v4 </td>
+            <td> Iconify </td>
+            <td> v3 </td>
         </tr>
     </tbody>
 </table>
