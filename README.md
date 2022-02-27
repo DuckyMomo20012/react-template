@@ -143,16 +143,17 @@ Edit npm script:
 yarn add @mantine/hooks @mantine/core
 ```
 
-> NOTE: Override **Mantine configs** with **WindiCSS configs**.
+> NOTE: Override **Mantine configs** with **WindiCSS configs**.\
+> More detail in: [CustomMantineProvider.jsx](/src/provider/CustomMantineProvider.jsx)
 
 <details>
 <summary>theme.colors</summary>
 Use 'blue-gray' for dark color from Mantine, so 'dark' color from WindiCSS is removed
 
-<a href="https://mantine.dev/theming/extend-theme/#default-colors">Base</a>
-<a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-colors.ts#L3">Base (github)</a>
-<a href="https://windicss.org/utilities/general/colors.html">Changes</a>
-<a href="https://github.com/windicss/windicss/blob/main/src/config/colors.ts#L132">Changes (github)</a>
+<p><a href="https://mantine.dev/theming/extend-theme/#default-colors">Base</a></p>
+<p><a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-colors.ts#L3">Base (github)</a></p>
+<p><a href="https://windicss.org/utilities/general/colors.html">Changes</a></p>
+<p><a href="https://github.com/windicss/windicss/blob/main/src/config/colors.ts#L132">Changes (github)</a></p>
 
 ```diff
 {
@@ -582,8 +583,8 @@ Use 'blue-gray' for dark color from Mantine, so 'dark' color from WindiCSS is re
 
 <details>
 <summary>theme.fontFamily</summary>
-<a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L19">Base</a>
-<a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L530">Changes</a>
+<p><a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L19">Base (github)</a></p>
+<p><a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L530">Changes (github)</a></p>
 
 ```diff
 - '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji'
@@ -595,8 +596,8 @@ Use 'blue-gray' for dark color from Mantine, so 'dark' color from WindiCSS is re
 
 <details>
 <summary>theme.lineHeight</summary>
-<a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L17">Base</a>
-<a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L797">Changes</a>
+<p><a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L17">Base (github)</a></p>
+<p><a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L797">Changes (github)</a></p>
 
 ```diff
 - 1.55
@@ -608,8 +609,8 @@ Use 'blue-gray' for dark color from Mantine, so 'dark' color from WindiCSS is re
 
 <details>
 <summary>theme.headings.fontFamily</summary>
-<a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L66">Base</a>
-<a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L530">Changes</a>
+<p><a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L66">Base (github)</a></p>
+<p><a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L530">Changes (github)</a></p>
 
 ```diff
 - '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji'
@@ -621,10 +622,10 @@ Use 'blue-gray' for dark color from Mantine, so 'dark' color from WindiCSS is re
 
 <details>
 <summary>theme.breakpoints</summary>
-<a href="https://mantine.dev/theming/extend-theme/#breakpoints">Base</a>
-<a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L56">Base (github)</a>
-<a href="https://windicss.org/features/responsive-design.html#breakpoints">Changes</a>
-<a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L66">Changes (github)</a>
+<p><a href="https://mantine.dev/theming/extend-theme/#breakpoints">Base</a></p>
+<p><a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L56">Base (github)</a></p>
+<p><a href="https://windicss.org/features/responsive-design.html#breakpoints">Changes</a></p>
+<p><a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L66">Changes (github)</a></p>
 
 ```diff
 {
@@ -646,8 +647,8 @@ Use 'blue-gray' for dark color from Mantine, so 'dark' color from WindiCSS is re
 
 <details>
 <summary>theme.shadows</summary>
-<a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L24">Base</a>
-<a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L422">Changes</a>
+<p><a href="https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts#L24">Base (github)</a></p>
+<p><a href="https://github.com/windicss/windicss/blob/main/src/config/base.ts#L422">Changes (github)</a></p>
 
 ```diff
 {
