@@ -22,7 +22,6 @@
   "plugins": ["react", "import"],
   "rules": {
     "eqeqeq": "warn",
-    "func-style": ["warn", "expression"],
     "import/prefer-default-export": "off",
     "no-var": "error",
     "prefer-destructuring": [
@@ -44,6 +43,7 @@
         "ignore": ["children"]
       }
     ],
+    "react/jsx-sort-props": "warn",
     "require-await": "warn",
     "spaced-comment": ["warn", "always"],
     "strict": ["error", "global"]

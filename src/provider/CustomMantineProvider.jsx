@@ -313,6 +313,8 @@ const CustomMantineProvider = ({ children }) => {
           none: '0 0 #0000',
         },
       }}
+      withGlobalStyles
+      withNormalizeCSS
     >
       {children}
     </MantineProvider>
