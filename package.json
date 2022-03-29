@@ -1,5 +1,5 @@
 {
-  "name": "material-you-builder",
+  "name": "my-app",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@iconify/react": "^3.2.0",
-    "@mantine/core": "^4.0.9",
-    "@mantine/hooks": "^4.0.9",
+    "@mantine/core": "^4.1.0",
+    "@mantine/hooks": "^4.1.0",
     "@reduxjs/toolkit": "^1.8.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1",

@@ -34,7 +34,7 @@ My react app template for practicing with many features:
         <tr>
             <td> UI Components Library </td>
             <td> Mantine </td>
-            <td> v3 </td>
+            <td> v4 </td>
         </tr>
         <tr>
             <td> UI Component Visualizer </td>
