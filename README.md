@@ -7,54 +7,59 @@ My react app template for practicing with many features:
 <table>
     <tbody>
         <tr>
+            <th> Stack </th>
+            <th> Library/Package </th>
+            <th> Version </th>
+        </tr>
+        <tr>
             <td> Framework </td>
             <td> React </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/facebook/react?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/react?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> Routing </td>
             <td> React-router </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/remix-run/react-router?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/react-router-dom?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> State Management </td>
             <td> Redux-toolkit </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/reduxjs/redux-toolkit?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/@reduxjs/toolkit?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> Data fetching </td>
             <td> React-query </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/tannerlinsley/react-query?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/react-query?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> Component Styling </td>
             <td> WindiCSS </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/windicss/windicss?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/windicss?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> UI Components Library </td>
             <td> Mantine </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/mantinedev/mantine?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/@mantine/core?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> UI Component Visualizer </td>
             <td> Storybook <br/> (@storybook/react)</td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/storybookjs/storybook?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/@storybook/react?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> Lint tool </td>
             <td> ESLint </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/eslint/eslint?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/eslint?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> Formatter </td>
             <td> Prettier </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/prettier/prettier?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/prettier?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> Build tool </td>
             <td> Vite </td>
-            <td> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/vitejs/vite?color=B9C3FF&style=flat-square"> </td>
+            <td> <img alt="npm" src="https://img.shields.io/npm/v/vite?color=B9C3FF&style=flat-square"> </td>
         </tr>
         <tr>
             <td> Icons </td>
