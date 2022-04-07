@@ -7,7 +7,7 @@ My react app template for practicing with many features:
 <table>
     <tbody>
         <tr>
-            <th> Stack </th>
+            <th> Tech Stack </th>
             <th> Library/Package </th>
             <th> Version </th>
         </tr>
@@ -69,33 +69,33 @@ My react app template for practicing with many features:
     </tbody>
 </table>
 
-# 1. Create template from scratch:
+## 1. Create template from scratch:
 
-## 1.1. Create vite project:
+### 1.1. Create vite project:
 
 ```console
 yarn create vite
 ```
 
-## 1.2. Change directory to newly created project:
+### 1.2. Change directory to newly created project:
 
 ```console
 cd my-app
 ```
 
-## 1.3. Install required packages from vite:
+### 1.3. Install required packages from vite:
 
 ```console
 yarn
 ```
 
-## 1.4. Install react-router:
+### 1.4. Install react-router:
 
 ```console
 yarn add react-router-dom@latest
 ```
 
-## 1.5. Install more packages (dev dependencies):
+### 1.5. Install more packages (dev dependencies):
 
 - Prettier: prettier
 - Eslint: eslint, eslint-plugin-react
@@ -106,7 +106,7 @@ yarn add react-router-dom@latest
 yarn add --dev prettier eslint eslint-plugin-react @storybook/addon-postcss
 ```
 
-## 1.6. Install tailwindcss:
+### 1.6. Install tailwindcss:
 
 - Install package:
 
@@ -126,7 +126,7 @@ https://windicss.org/integrations/vite.html
 yarn add --dev prettier-plugin-tailwindcss
 ```
 
-## 1.7. Install storybook:
+### 1.7. Install storybook:
 
 - Create storybook:
 
@@ -142,7 +142,7 @@ Edit npm script:
 "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
 ```
 
-## 1.8. Install Mantine:
+### 1.8. Install Mantine:
 
 ```console
 yarn add @mantine/hooks @mantine/core
@@ -675,7 +675,7 @@ Use 'blue-gray' for dark color from Mantine, so 'dark' color from WindiCSS is re
 
 </details>
 
-# 2. TODO:
+## 2. TODO:
 
 - [ ] Migrate react to v18.
 - [ ] Add Docker, Jenkins for project.
