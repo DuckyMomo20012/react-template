@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// eslint-disable-next-line import/no-unresolved
+import { BrowserRouter } from 'react-router-dom';
+import { CustomRoute } from '@/routes/CustomRoute.jsx';
+import { CustomMantineProvider } from '@/providers/CustomMantineProvider.jsx';
 import 'virtual:windi-devtools';
-// eslint-disable-next-line import/no-unresolved
 import 'virtual:windi.css';
-import App from './App.jsx';
-import './index.css';
-import { CustomMantineProvider } from './provider/CustomMantineProvider.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CustomMantineProvider>
-      <App />
-    </CustomMantineProvider>
+    <BrowserRouter>
+      <CustomMantineProvider>
+        <CustomRoute />
+      </CustomMantineProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
 );
