@@ -1,9 +1,5 @@
 import { MantineProvider } from '@mantine/core';
 
-// Windi base config:
-// https://github.com/windicss/windicss/blob/main/src/config/base.ts
-// Mantine default theme:
-// https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts
 const CustomMantineProvider = ({ children }) => {
   const blueGray = [
     '#f8fafc',
@@ -297,10 +293,10 @@ const CustomMantineProvider = ({ children }) => {
           dark: blueGray,
         },
         fontFamily:
-          'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+          'Inter, ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
         headings: {
           fontFamily:
-            'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+            'Barlow, ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
         },
         lineHeight: 1,
         shadows: {

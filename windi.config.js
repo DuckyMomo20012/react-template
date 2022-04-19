@@ -1,6 +1,11 @@
 export default {
-  theme: {
+  alias: {
     // ...
+  },
+  attributify: true,
+  extract: {
+    exclude: ['node_modules', '.git', '.next/**/*'],
+    include: ['**/*.{jsx,css}'],
   },
   plugins: [
     // Other plugins
@@ -15,4 +20,17 @@ export default {
       },
     }),
   ],
+  shortcuts: {
+    // ...
+  },
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        serif: ['Roboto Slab', 'ui-serif', 'Georgia'],
+        mono: ['Space Mono', 'ui-monospace', 'SFMono-Regular'],
+        heading: ['Barlow'],
+      },
+    },
+  },
 };
