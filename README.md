@@ -2,6 +2,8 @@
 
 > ⚠️ WARNING: This template is unstable, use with caution.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/af6e74f5-7c1e-44fd-93ea-6073c8ac1176/deploy-status)](https://app.netlify.com/sites/my-react-template/deploys)
+
 My react app template for practicing with many features:
 
 <table>
