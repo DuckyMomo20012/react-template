@@ -24,8 +24,8 @@ export default {
     // ...
   },
   theme: {
-    colors: { white: '#F5F5F5', black: '#333' },
     extend: {
+      colors: { white: '#F5F5F5', black: '#333' },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
         serif: ['Roboto Slab', 'ui-serif', 'Georgia'],
