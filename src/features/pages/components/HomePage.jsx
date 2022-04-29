@@ -1,24 +1,38 @@
-import { Container, Text, Button, Group, useMantineTheme } from '@mantine/core';
+import { Icon } from '@iconify/react';
+import {
+  Box,
+  Button,
+  Container,
+  Group,
+  Text,
+  Title,
+  UnstyledButton,
+  useMantineColorScheme,
+} from '@mantine/core';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
-  const theme = useMantineTheme();
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dark = colorScheme === 'dark';
 
   return (
-    <div className="dark:bg-dark-800 relative border bg-white font-mono">
+    <Box className="dark:bg-dark-800 relative border bg-white font-mono">
       <Container className="pt-200px pb-120px <md:py-80px relative" size={700}>
-        <h1 className="text-62px leading-1.1 <md:(text-42px leading-1.2) dark:color-light-50 m-0 bg-transparent p-0 font-black">
+        <Title
+          className="text-62px leading-1.1 <md:(text-42px leading-1.2) dark:color-light-50 m-0 bg-transparent p-0 font-black"
+          order={1}
+        >
           A{' '}
           <Text
             component="span"
-            gradient={{ from: 'blue', to: 'cyan' }}
+            gradient={{ from: 'rose', to: 'orange' }}
             inherit
             variant="gradient"
           >
             fully featured
           </Text>{' '}
           React components and hooks library
-        </h1>
+        </Title>
 
         <Text className="text-24px <md:text-18px mt-24px" color="dimmed">
           Build fully functional accessible web applications with ease - Mantine
@@ -30,7 +44,7 @@ const HomePage = () => {
           <Link to="/account/login">
             <Button
               className="h-54px px-38px <md:(h-54px px-18px flex-1)"
-              gradient={{ from: 'blue', to: 'cyan' }}
+              gradient={{ from: 'rose', to: 'orange' }}
               size="xl"
               variant="gradient"
             >
@@ -40,7 +54,7 @@ const HomePage = () => {
 
           <Button
             className="h-54px px-38px <md:(h-54px px-18px flex-1) border-dark-900 dark:(border-transparent bg-dark-600 hover:!bg-dark-600) border-2 bg-transparent hover:!bg-gray-50"
-            color={theme.colorScheme === 'dark' ? 'gray' : 'dark'}
+            color={colorScheme === 'dark' ? 'red' : 'dark'}
             component="a"
             href="https://github.com/mantinedev/mantine"
             size="xl"
@@ -48,9 +62,21 @@ const HomePage = () => {
           >
             GitHub
           </Button>
+          <UnstyledButton
+            className={
+              'w-44px h-44px dark:(text-dark-50 hover:bg-dark-500) hover:(bg-gray-100) flex items-center justify-center rounded-md text-gray-700'
+            }
+            onClick={() => toggleColorScheme()}
+          >
+            <Icon
+              height={24}
+              icon={dark ? 'ic:outline-dark-mode' : 'ic:outline-light-mode'}
+              width={24}
+            />
+          </UnstyledButton>
         </Group>
       </Container>
-    </div>
+    </Box>
   );
 };
 
