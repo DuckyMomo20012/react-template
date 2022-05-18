@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react';
 import {
   Box,
   Button,
@@ -9,6 +8,8 @@ import {
   UnstyledButton,
   useMantineColorScheme,
 } from '@mantine/core';
+
+import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
@@ -64,7 +65,7 @@ const HomePage = () => {
           </Button>
           <UnstyledButton
             className={
-              'w-44px h-44px dark:(text-dark-50 hover:bg-dark-500) hover:(bg-gray-100) flex items-center justify-center rounded-md text-gray-700'
+              'w-44px h-44px dark:(text-dark-50 hover:bg-dark-500) hover:(bg-primary-100) text-primary-700 flex items-center justify-center rounded-md'
             }
             onClick={() => toggleColorScheme()}
           >

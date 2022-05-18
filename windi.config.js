@@ -1,3 +1,5 @@
+import colors from 'windicss/colors';
+
 export default {
   alias: {
     // ...
@@ -26,7 +28,7 @@ export default {
   },
   theme: {
     extend: {
-      colors: { white: '#FAFAFA', black: '#333' },
+      colors: { white: '#FAFAFA', black: '#333', primary: colors.rose },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
         serif: ['Roboto Slab', 'ui-serif', 'Georgia'],
