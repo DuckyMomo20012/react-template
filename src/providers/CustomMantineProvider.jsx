@@ -1,5 +1,5 @@
-import { MantineProvider } from '@mantine/core';
 import { CustomColorSchemeProvider } from './CustomColorSchemeProvider.jsx';
+import { MantineProvider } from '@mantine/core';
 
 const slate = [
   '#f8fafc',
