@@ -13,7 +13,7 @@
   "dependencies": {
     "@iconify/react": "3.2.2",
     "@mantine/core": "4.2.7",
-    "@mantine/hooks": "4.2.6",
+    "@mantine/hooks": "4.2.7",
     "@reduxjs/toolkit": "1.8.2",
     "hash-wasm": "4.9.0",
     "prop-types": "15.8.1",
