@@ -26,9 +26,16 @@ export default {
   shortcuts: {
     // ...
   },
+  safelist: [
+    // ...
+  ],
   theme: {
     extend: {
-      colors: { white: '#FAFAFA', black: '#333', primary: colors.rose },
+      colors: {
+        white: '#FAFAFA',
+        black: '#333',
+        primary: colors.rose,
+      },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
         serif: ['Roboto Slab', 'ui-serif', 'Georgia'],

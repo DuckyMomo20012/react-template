@@ -1,12 +1,12 @@
 import {
-  TextInput,
-  PasswordInput,
   Anchor,
-  Paper,
-  Title,
-  Text,
-  Container,
   Button,
+  Container,
+  Paper,
+  PasswordInput,
+  Text,
+  TextInput,
+  Title,
 } from '@mantine/core';
 
 import { Link } from 'react-router-dom';
@@ -19,7 +19,7 @@ const Register = () => {
       </Title>
       <Text align="center" color="dimmed" mt={5} size="sm">
         Already have an account?{' '}
-        <Anchor component={Link} size="sm" to="/account/login">
+        <Anchor component={Link} size="sm" to="/auth/login">
           Login
         </Anchor>
       </Text>
