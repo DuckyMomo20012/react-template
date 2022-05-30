@@ -1,28 +1,27 @@
 import {
   Anchor,
   Button,
+  Code,
   Container,
+  Group,
   Modal,
   Paper,
   PasswordInput,
   Text,
   TextInput,
-  Title,
-  Group,
   ThemeIcon,
-  Code,
+  Title,
 } from '@mantine/core';
-import { useForm } from 'react-hook-form';
-import { Icon } from '@iconify/react';
-
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+
+import { Icon } from '@iconify/react';
+import { getOneUser } from '@/pages/api/auth/index.js';
 import { sha1 } from 'hash-wasm';
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 
-import { getUser } from '@/features/auth/api';
-
-async function fetchUsers() {
-  const user = await getUser();
+async function fetchOneUser() {
+  const user = await getOneUser();
   return user;
 }
 
@@ -33,9 +32,9 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const onSubmit = async (data) => {
-    const users = await fetchUsers();
+    const user = await fetchOneUser();
     const hashPassword = await sha1(data.password);
-    if (users.name === data.username && users.password === hashPassword) {
+    if (user.name === data.username && user.password === hashPassword) {
       setIsLoggedIn(true);
     }
     setOpened(true);
@@ -72,7 +71,7 @@ const Login = () => {
       </Title>
       <Text align="center" color="dimmed" mt={5} size="sm">
         Do not have an account yet?{' '}
-        <Link to="/account/register">
+        <Link to="/auth/register">
           <Anchor size="sm">Create account</Anchor>
         </Link>
       </Text>
