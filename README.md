@@ -4,8 +4,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/af6e74f5-7c1e-44fd-93ea-6073c8ac1176/deploy-status)](https://app.netlify.com/sites/my-react-template/deploys)
 
-My react app template for practicing with many features:
-
 <table>
     <tbody>
         <tr>
@@ -71,100 +69,61 @@ My react app template for practicing with many features:
     </tbody>
 </table>
 
-## 1. Create template from scratch:
+## Getting Started:
 
-### 1.1. Create vite project:
+First, install dependencies:
 
-```console
-yarn create vite
-```
-
-### 1.2. Change directory to newly created project:
-
-```console
-cd my-app
-```
-
-### 1.3. Install required packages from vite:
-
-```console
+```bash
 yarn
 ```
 
-### 1.4. Install react-router:
+Then run the development server:
 
-```console
-yarn add react-router-dom@latest
+```bash
+yarn dev
 ```
 
-### 1.5. Install more packages (dev dependencies):
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the
+result.
 
-- Prettier: prettier
-- Eslint: eslint, eslint-plugin-react
-- ~~Tailwind: tailwindcss, postcss, autoprefixer~~
-- Storybook: @storybook/addon-postcss
+## Folder Architecture:
 
-```console
-yarn add --dev prettier eslint eslint-plugin-react @storybook/addon-postcss
+```
+.
+├── components
+│   ├── elements
+│   ├── layouts
+│   └── modules
+├── constants
+├── context
+├── hooks
+├── pages
+│   └── api
+├── routes
+├── store
+│   └── slice
+├── stories
+└── main.jsx
 ```
 
-### 1.6. Install tailwindcss:
+- `elements`: Basic building blocks.
+- `layouts`: Wrap your pages with default layout.
+- `modules`: Modules are built out of multiple `elements`.
+- `constants`: Global constants.
+- `context`: React Context providers.
+- `hooks`: Custom hooks.
+- `pages`: Your page routes (adopt from NextJS folder architecture).
+- `pages/api`: Your apis (adopt from NextJS folder architecture).
+- `routes`: Global route for react-router.
+- `store`: Store your Redux store.
+- `store/slice`: Store your Redux slices.
+- `stories`: Your stories components.
 
-- Install package:
+## Build Template from Scratch:
 
-```console
-yarn add --dev vite-plugin-windicss windicss
-```
+Checkout [Wiki](https://github.com/DuckyMomo20012/react-template/wiki) page
 
-- Follow instructions from windicss documentation:
-
-https://windicss.org/integrations/vite.html
-
-- Install "sort class" plugin for windicss (from tailwindcss):
-
-> NOTE: Create "tailwind.config.js" to avoid errors. Tailwind plugins don't support windicss functions, such as: addDynamic, ...
-
-```console
-yarn add --dev prettier-plugin-tailwindcss
-```
-
-### 1.7. Install storybook:
-
-- Create storybook:
-
-```console
-npx sb init
-```
-
-- Fix storybook error **"ERR_OSSL_EVP_UNSUPPORTED"**:
-
-Edit npm script:
-
-```json
-"storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
-```
-
-### 1.8. Install Mantine:
-
-```console
-yarn add @mantine/hooks @mantine/core
-```
-
-> NOTE: Override **Mantine configs** with **WindiCSS configs**.\
-> More detail in:
-> [CustomMantineProvider.jsx](/src/provider/CustomMantineProvider.jsx)
-
-> NOTE: This project is loaded with Google Fonts: Inter, Barlow, Roboto Slab,
-> Space Mono
-
-I still keep base Mantine configs if windicss doesn't have those configs (lines
-commented with: "Base Mantine")
-
-[Base Mantine theme](https://github.com/mantinedev/mantine/blob/master/src/mantine-styles/src/theme/default-theme.ts)
-
-[Base Windicss theme](https://github.com/windicss/windicss/blob/main/src/config/base.ts)
-
-## 2. TODO:
+## TODO:
 
 - [ ] Add Docker, Jenkins for project.
 - [x] Migrate react to v18.
