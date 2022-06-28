@@ -48,6 +48,6 @@
     "prettier-plugin-tailwindcss": "0.1.11",
     "vite": "2.9.13",
     "vite-plugin-windicss": "1.8.5",
-    "windicss": "3.5.4"
+    "windicss": "3.5.5"
   }
 }
