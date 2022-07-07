@@ -3,7 +3,7 @@
   <h1>React Template</h1>
 
   <p>
-    A simple react template
+    A simple React template
   </p>
 
 <!-- Badges -->
@@ -117,10 +117,6 @@
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.mysql.com/">MySQL</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><a href="https://redis.io/">Redis</a></li>
-    <li><a href="https://neo4j.com/">Neo4j</a></li>
     <li><a href="https://www.mongodb.com/">MongoDB</a></li>
   </ul>
 </details>
@@ -188,11 +184,11 @@ npm install --global yarn
 
 ### :gear: Installation
 
-Install my-project with npm
+Install react-template with npm
 
 ```bash
-yarn install my-project
-cd my-project
+yarn install react-template
+cd react-template
 ```
 
 <!-- Running Tests -->
@@ -218,7 +214,7 @@ git clone https://github.com/DuckyMomo20012/react-template.git
 Go to the project directory
 
 ```bash
-cd my-project
+cd react-template
 ```
 
 Install dependencies
@@ -250,7 +246,7 @@ yarn deploy
 Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
 
 ```javascript
-import Component from 'my-project';
+import Component from 'react-template';
 
 function App() {
   return <Component />;
