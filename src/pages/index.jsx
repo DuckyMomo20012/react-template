@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Code,
   Container,
   Group,
   Text,
@@ -11,6 +12,8 @@ import {
 
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
+
+const TEST_VAR = import.meta.env.VITE_TEST_VAR;
 
 const HomePage = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -39,6 +42,9 @@ const HomePage = () => {
           Build fully functional accessible web applications with ease - Mantine
           includes more than 100 customizable components and hooks to cover you
           in any situation
+        </Text>
+        <Text color="rose">
+          Your TEST_VAR: <Code color="blue">{TEST_VAR}</Code>
         </Text>
 
         <Group className="mt-48px <md:mt-24px">
