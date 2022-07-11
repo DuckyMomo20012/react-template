@@ -53,9 +53,8 @@
   - [Environment Variables](#key-environment-variables)
 - [Getting Started](#toolbox-getting-started)
   - [Prerequisites](#bangbang-prerequisites)
-  - [Installation](#gear-installation)
-  - [Running Tests](#test_tube-running-tests)
   - [Run Locally](#running-run-locally)
+  - [Running Tests](#test_tube-running-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [Usage](#eyes-usage)
 - [Roadmap](#compass-roadmap)
@@ -181,27 +180,6 @@ This project uses [Yarn](https://yarnpkg.com/) as package manager:
 npm install --global yarn
 ```
 
-<!-- Installation -->
-
-### :gear: Installation
-
-Install react-template with yarn:
-
-```bash
-yarn install react-template
-cd react-template
-```
-
-<!-- Running Tests -->
-
-### :test_tube: Running Tests
-
-To run tests, run the following command:
-
-```bash
-yarn test
-```
-
 <!-- Run Locally -->
 
 ### :running: Run Locally
@@ -221,13 +199,23 @@ cd react-template
 Install dependencies:
 
 ```bash
-yarn install
+yarn
 ```
 
 Start the server:
 
 ```bash
 yarn dev
+```
+
+<!-- Running Tests -->
+
+### :test_tube: Running Tests
+
+To run tests, run the following command:
+
+```bash
+yarn test
 ```
 
 <!-- Deployment -->
