@@ -23,7 +23,7 @@
   <a href="https://github.com/DuckyMomo20012/react-template/issues/">
     <img src="https://img.shields.io/github/issues/DuckyMomo20012/react-template" alt="open issues" />
   </a>
-  <a href="https://github.com/DuckyMomo20012/react-template/blob/master/LICENSE">
+  <a href="https://github.com/DuckyMomo20012/react-template/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/DuckyMomo20012/react-template.svg" alt="license" />
   </a>
 </p>
@@ -153,9 +153,11 @@
 ### :key: Environment Variables
 
 To run this project, you will need to add the following environment variables to
-your .env file.
+your `.env` file:
 
-`VITE_TEST_VAR`: Description of this environment variable.
+- **App configs:**
+
+  `VITE_TEST_VAR`: Description of this environment variable.
 
 E.g:
 
