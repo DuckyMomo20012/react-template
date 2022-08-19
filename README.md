@@ -141,12 +141,12 @@
 
 ### :art: Color Reference
 
-| Color           | Hex                                                             |
-| --------------- | --------------------------------------------------------------- |
-| Primary Color   | ![#222831](http://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](http://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color    | ![#00ADB5](http://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color      | ![#EEEEEE](http://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
+| Color           | Hex                                                              |
+| --------------- | ---------------------------------------------------------------- |
+| Primary Color   | ![#222831](https://placehold.jp/222831/222831/10x10.png) #222831 |
+| Secondary Color | ![#393E46](https://placehold.jp/393E46/393E46/10x10.png) #393E46 |
+| Accent Color    | ![#00ADB5](https://placehold.jp/00ADB5/00ADB5/10x10.png) #00ADB5 |
+| Text Color      | ![#EEEEEE](https://placehold.jp/EEEEEE/EEEEEE/10x10.png) #EEEEEE |
 
 <!-- Env Variables -->
 
@@ -162,10 +162,11 @@ your `.env` file:
 E.g:
 
 ```
+# .env
 VITE_TEST_VAR="my secret key"
 ```
 
-You can also checkout file `.env.example` to see all required environment
+You can also check out the file `.env.example` to see all required environment
 variables.
 
 <!-- Getting Started -->
@@ -237,7 +238,8 @@ yarn deploy
 Use this space to tell a little more about your project and how it can be used.
 Show additional screenshots, code samples, demos, or links to other resources.
 
-```javascript
+```jsx
+// foo.jsx
 import Component from 'react-template';
 
 function App() {
