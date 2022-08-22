@@ -13,9 +13,9 @@
   "dependencies": {
     "@emotion/react": "11.10.0",
     "@iconify/react": "3.2.2",
-    "@mantine/core": "5.1.6",
-    "@mantine/hooks": "5.1.6",
-    "@reduxjs/toolkit": "1.8.4",
+    "@mantine/core": "5.2.0",
+    "@mantine/hooks": "5.2.0",
+    "@reduxjs/toolkit": "1.8.5",
     "@tanstack/react-query": "4.2.1",
     "@tanstack/react-query-devtools": "4.2.1",
     "bcrypt": "5.0.1",
@@ -48,7 +48,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",
-    "vite": "3.0.8",
+    "vite": "3.0.9",
     "vite-plugin-windicss": "1.8.7",
     "windicss": "3.5.6"
   }
