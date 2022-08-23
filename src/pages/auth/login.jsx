@@ -16,13 +16,29 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { Icon } from '@iconify/react';
 import { getOneUser } from '@/pages/api/auth/index.js';
-import { sha1 } from 'hash-wasm';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
 async function fetchOneUser() {
   const user = await getOneUser();
   return user;
+}
+
+async function sha256(message) {
+  // encode as UTF-8
+  const msgBuffer = new TextEncoder().encode(message);
+
+  // hash the message
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+  // convert ArrayBuffer to Array
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+  // convert bytes to hex string
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+  return hashHex;
 }
 
 const Login = () => {
@@ -33,7 +49,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     const user = await fetchOneUser();
-    const hashPassword = await sha1(data.password);
+    const hashPassword = await sha256(data.password);
     if (user.name === data.username && user.password === hashPassword) {
       setIsLoggedIn(true);
     }
