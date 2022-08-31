@@ -29,7 +29,7 @@ const HomePage = () => {
           A{' '}
           <Text
             component="span"
-            gradient={{ from: 'rose', to: 'orange' }}
+            gradient={{ from: 'blue', to: 'fuchsia' }}
             inherit
             variant="gradient"
           >
@@ -43,7 +43,7 @@ const HomePage = () => {
           includes more than 100 customizable components and hooks to cover you
           in any situation
         </Text>
-        <Text color="rose">
+        <Text color="blue">
           Your TEST_VAR: <Code color="blue">{TEST_VAR}</Code>
         </Text>
 
@@ -51,7 +51,7 @@ const HomePage = () => {
           <Link to="/auth/login">
             <Button
               className="h-54px px-38px <md:(h-54px px-18px flex-1)"
-              gradient={{ from: 'rose', to: 'orange' }}
+              gradient={{ from: 'blue', to: 'fuchsia' }}
               size="xl"
               variant="gradient"
             >
@@ -61,7 +61,7 @@ const HomePage = () => {
 
           <Button
             className="h-54px px-38px <md:(h-54px px-18px flex-1) border-dark-900 dark:(border-transparent bg-dark-600 hover:!bg-dark-600) border-2 bg-transparent hover:!bg-gray-50"
-            color={colorScheme === 'dark' ? 'red' : 'dark'}
+            color={colorScheme === 'dark' ? 'blue' : 'dark'}
             component="a"
             href="https://github.com/mantinedev/mantine"
             size="xl"

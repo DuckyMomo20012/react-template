@@ -15,9 +15,9 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 
 import { Icon } from '@iconify/react';
-import { getOneUser } from '@/pages/api/auth/index.js';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { getOneUser } from '@/pages/api/auth/index.js';
 
 async function fetchOneUser() {
   const user = await getOneUser();
@@ -92,8 +92,8 @@ const Login = () => {
         </Anchor>
       </Text>
       <Text align="center" color="dimmed" mt={5} size="sm">
-        <Code color="red">username:</Code> Hello,{' '}
-        <Code color="red">password:</Code> World
+        <Code color="blue">username:</Code> Hello,{' '}
+        <Code color="blue">password:</Code> World
       </Text>
 
       <Paper mt={30} p={30} radius="md" shadow="md" withBorder>
