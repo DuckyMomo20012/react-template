@@ -4,6 +4,4 @@ dist
 dist-ssr
 *.local
 
-.history
-
 .env

@@ -11,9 +11,10 @@ const todosSlice = createSlice({
       state.push(action.payload);
     },
     todoToggled(state, action) {
-      const todo = state.find((todo) => todo.id === action.payload);
+      const todo = state.find((todoItem) => todoItem.id === action.payload);
       todo.completed = !todo.completed;
     },
+    // eslint-disable-next-line no-unused-vars
     todosLoading(state, action) {
       return {
         ...state,

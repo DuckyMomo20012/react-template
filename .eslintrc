@@ -29,8 +29,17 @@
   "rules": {
     "eqeqeq": "warn",
     "import/extensions": "off",
-    "import/no-unresolved": "off",
+    "import/no-unresolved": "warn",
     "import/prefer-default-export": "off",
+    "import/order": [
+      "warn",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "import/no-extraneous-dependencies": ["warn", { "devDependencies": true }],
     "no-var": "error",
     "prefer-destructuring": [
       "warn",
@@ -46,20 +55,14 @@
         "endOfLine": "auto"
       }
     ],
-    "react/jsx-sort-props": "warn",
-    "react/prop-types": [
-      "off",
-      {
-        "ignore": ["children"]
-      }
-    ],
     "require-await": "warn",
     "spaced-comment": ["warn", "always"],
-    "strict": ["error", "global"]
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
-    }
+    },
+    "import/resolver": { "typescript": true }
   }
 }

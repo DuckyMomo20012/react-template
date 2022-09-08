@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
-    "jsx": "preserve",
+    "outDir": "./dist/out-tsc",
+    "types": [],
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "esModuleInterop": true,
     "baseUrl": "./src",
     "paths": {
+      "@/*": ["*"],
       "@/constants/*": ["constants/*"],
       "@/context/*": ["context/*"],
       "@/hooks/*": ["hooks/*"],
@@ -10,10 +15,12 @@
       "@/utils/*": ["utils/*"],
       "@/routes/*": ["routes/*"],
       "@/pages/*": ["pages/*"],
+      "@/components/*": ["components/*"],
       "@/elements/*": ["components/elements/*"],
       "@/layouts/*": ["components/layouts/*"],
       "@/modules/*": ["components/modules/*"],
-      "@/lib/*": ["../lib/*"]
+      "@/libs/*": ["libs/*"]
     }
-  }
+  },
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
 }
