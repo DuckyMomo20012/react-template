@@ -1,3 +1,4 @@
+import pluginAnimations from '@windicss/plugin-animations';
 import colors from 'windicss/colors';
 
 export default {
@@ -12,7 +13,7 @@ export default {
   },
   plugins: [
     // Other plugins
-    require('@windicss/plugin-animations')({
+    pluginAnimations({
       settings: {
         animatedSpeed: 1000,
         heartBeatSpeed: 1000,

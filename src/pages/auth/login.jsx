@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import {
   Anchor,
   Button,
@@ -12,11 +13,10 @@ import {
   ThemeIcon,
   Title,
 } from '@mantine/core';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { Icon } from '@iconify/react';
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
 import { getOneUser } from '@/pages/api/auth/index.js';
 
 async function fetchOneUser() {

@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import {
   Box,
   Button,
@@ -10,7 +11,6 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 
-import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 
 const TEST_VAR = import.meta.env.VITE_TEST_VAR;

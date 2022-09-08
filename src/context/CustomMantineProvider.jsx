@@ -1,9 +1,9 @@
-import windiColors from 'windicss/colors';
-import windiDefaultTheme from 'windicss/defaultTheme';
 import {
   MantineProvider,
   DEFAULT_THEME as mantineDefaultTheme,
 } from '@mantine/core';
+import windiColors from 'windicss/colors';
+import windiDefaultTheme from 'windicss/defaultTheme';
 import { CustomColorSchemeProvider } from './CustomColorSchemeProvider.jsx';
 
 const convertBreakpoint = (breakpoint) => {
