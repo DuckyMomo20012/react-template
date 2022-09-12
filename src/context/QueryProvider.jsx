@@ -4,7 +4,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const queryClient = new QueryClient();
 
-const CustomQueryClientProvider = ({ children }) => {
+const QueryProvider = ({ children }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <>
@@ -15,4 +15,4 @@ const CustomQueryClientProvider = ({ children }) => {
   );
 };
 
-export { CustomQueryClientProvider };
+export { QueryProvider };

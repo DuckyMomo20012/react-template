@@ -7,9 +7,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import {
-  CustomMantineProvider,
-  CustomQueryClientProvider,
-  CustomReduxProvider,
+  MantineProvider,
+  QueryProvider,
+  ReduxProvider,
 } from '@/context/index.js';
 import { CustomRoute } from '@/routes/CustomRoute.jsx';
 
@@ -18,14 +18,14 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <CustomReduxProvider>
+    <ReduxProvider>
       <BrowserRouter>
-        <CustomQueryClientProvider>
-          <CustomMantineProvider>
+        <QueryProvider>
+          <MantineProvider>
             <CustomRoute />
-          </CustomMantineProvider>
-        </CustomQueryClientProvider>
+          </MantineProvider>
+        </QueryProvider>
       </BrowserRouter>
-    </CustomReduxProvider>
+    </ReduxProvider>
   </React.StrictMode>,
 );

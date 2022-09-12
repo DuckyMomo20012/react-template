@@ -1,4 +1,3 @@
-export * from './CustomColorSchemeProvider.jsx';
-export * from './CustomMantineProvider.jsx';
-export * from './CustomQueryClientProvider.jsx';
-export * from './CustomReduxProvider.jsx';
+export * from './MantineProvider.jsx';
+export * from './QueryProvider.jsx';
+export * from './ReduxProvider.jsx';
