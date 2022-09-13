@@ -1,5 +1,6 @@
 <div align="center">
 
+  <img src="public/react.svg" alt="logo" width="200" height="auto" />
   <h1>React Template</h1>
 
   <p>
@@ -74,7 +75,10 @@
 ### :camera: Screenshots
 
 <div align="center">
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <p>Light mode</p>
+  <img src="https://user-images.githubusercontent.com/64480713/189928556-bbc437aa-b75b-48ab-b61c-f073f536a881.png" alt="screenshot" />
+  <p>Dark mode</p>
+  <img src="https://user-images.githubusercontent.com/64480713/189929229-bf5f94e4-7b39-4909-abef-60c8bd95fcf1.png" alt="screenshot_dark_mode" />
 </div>
 
 <!-- TechStack -->
@@ -91,7 +95,6 @@
     <li><a href="https://react-query.tanstack.com/">React Query</a></li>
     <li><a href="https://windicss.org/">WindiCSS</a></li>
     <li><a href="https://mantine.dev/">Mantine</a></li>
-    <li><a href="https://storybook.js.org/">Storybook</a></li>
     <li><a href="https://eslint.org/">ESLint</a></li>
     <li><a href="https://prettier.io/">Prettier</a></li>
     <li><a href="https://vitejs.dev/">Vite</a></li>
