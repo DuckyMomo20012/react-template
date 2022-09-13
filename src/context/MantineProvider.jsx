@@ -1,10 +1,12 @@
 import {
-  MantineProvider,
+  MantineProvider as DefaultMantineProvider,
   DEFAULT_THEME as mantineDefaultTheme,
+  ColorSchemeProvider,
+  Global,
 } from '@mantine/core';
+import { useEffect, useState } from 'react';
 import windiColors from 'windicss/colors';
 import windiDefaultTheme from 'windicss/defaultTheme';
-import { CustomColorSchemeProvider } from './CustomColorSchemeProvider.jsx';
 
 const convertBreakpoint = (breakpoint) => {
   const convertedBreakpoint = {};
@@ -64,15 +66,13 @@ const theme = {
   },
   radius: {
     ...mantineDefaultTheme.radius,
+    // NOTE: WindiCSS border radius messed up with Mantine
     // ...windiDefaultTheme.borderRadius,
   },
-  fontFamily:
-    'Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
-  fontFamilyMonospace:
-    '"Space Mono", ui-monospace,SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
+  fontFamily: `Inter,${mantineDefaultTheme.fontFamily}`,
+  fontFamilyMonospace: `"Space Mono",${mantineDefaultTheme.fontFamilyMonospace}`,
   headings: {
-    fontFamily:
-      'Barlow, ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+    fontFamily: `Barlow,${mantineDefaultTheme.headings.fontFamily}`,
   },
   lineHeight: mantineDefaultTheme.lineHeight,
   loader: 'oval',
@@ -82,14 +82,44 @@ const theme = {
   },
 };
 
-const CustomMantineProvider = ({ children }) => {
+const MyGlobalStyles = () => {
   return (
-    <CustomColorSchemeProvider>
-      <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
-        {children}
-      </MantineProvider>
-    </CustomColorSchemeProvider>
+    <Global
+      styles={{
+        'body.dark': {
+          img: {
+            filter: 'brightness(.8) contrast(1.2)',
+          },
+        },
+      }}
+    />
   );
 };
 
-export { CustomMantineProvider };
+const MantineProvider = ({ children }) => {
+  const [colorScheme, setColorScheme] = useState('light');
+  const toggleColorScheme = (value) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+
+  useEffect(() => {
+    if (colorScheme === 'dark') document.body.classList.add('dark');
+    else document.body.classList.remove('dark');
+  }, [colorScheme]);
+  return (
+    <ColorSchemeProvider
+      colorScheme={colorScheme}
+      toggleColorScheme={toggleColorScheme}
+    >
+      <DefaultMantineProvider
+        theme={{ ...theme, colorScheme }}
+        withGlobalStyles
+        withNormalizeCSS
+      >
+        <MyGlobalStyles />
+        {children}
+      </DefaultMantineProvider>
+    </ColorSchemeProvider>
+  );
+};
+
+export { MantineProvider };

@@ -1,89 +1,209 @@
 import { Icon } from '@iconify/react';
 import {
-  Box,
-  Button,
-  Code,
-  Container,
-  Group,
   Text,
   Title,
-  UnstyledButton,
+  Stack,
+  ActionIcon,
+  Group,
+  Image,
+  Tooltip,
   useMantineColorScheme,
+  Button,
+  Badge,
+  Code,
 } from '@mantine/core';
-
-import { Link } from 'react-router-dom';
-
-const TEST_VAR = import.meta.env.VITE_TEST_VAR;
 
 const HomePage = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
   return (
-    <Box className="dark:bg-dark-800 relative border bg-white font-mono">
-      <Container className="pt-200px pb-120px <md:py-80px relative" size={700}>
-        <Title
-          className="text-62px leading-1.1 <md:(text-42px leading-1.2) dark:color-light-50 m-0 bg-transparent p-0 font-black"
-          order={1}
-        >
-          A{' '}
-          <Text
-            component="span"
-            gradient={{ from: 'blue', to: 'fuchsia' }}
-            inherit
-            variant="gradient"
-          >
-            fully featured
-          </Text>{' '}
-          React components and hooks library
-        </Title>
+    <Stack align="center">
+      <Group position="center" grow spacing="xl">
+        <Image
+          src="/vite.svg"
+          height={80}
+          fit="contain"
+          className="hover:filter"
+          style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)' }}
+        />
+        <Image
+          src="/react.svg"
+          height={80}
+          fit="contain"
+          className="animate-duration-10000 animate-spin hover:filter"
+          style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)' }}
+        />
+      </Group>
+      <Title className="text-5xl" align="center">
+        Vite + React
+      </Title>
 
-        <Text className="text-24px <md:text-18px mt-24px" color="dimmed">
-          Build fully functional accessible web applications with ease - Mantine
-          includes more than 100 customizable components and hooks to cover you
-          in any situation
+      <Stack align="center" className="w-3/4" my={20}>
+        <Text size="2xl" align="center">
+          <Icon icon="fluent-emoji-flat:high-voltage" inline={true} /> Battery
+          included
         </Text>
-        <Text color="blue">
-          Your TEST_VAR: <Code color="blue">{TEST_VAR}</Code>
-        </Text>
-
-        <Group className="mt-48px <md:mt-24px">
-          <Link to="/auth/login">
-            <Button
-              className="h-54px px-38px <md:(h-54px px-18px flex-1)"
-              gradient={{ from: 'blue', to: 'fuchsia' }}
-              size="xl"
-              variant="gradient"
-            >
-              Get started
-            </Button>
-          </Link>
-
-          <Button
-            className="h-54px px-38px <md:(h-54px px-18px flex-1) border-dark-900 dark:(border-transparent bg-dark-600 hover:!bg-dark-600) border-2 bg-transparent hover:!bg-gray-50"
-            color={colorScheme === 'dark' ? 'blue' : 'dark'}
-            component="a"
-            href="https://github.com/mantinedev/mantine"
-            size="xl"
-            variant="outline"
-          >
-            GitHub
-          </Button>
-          <UnstyledButton
-            className={
-              'w-44px h-44px dark:(text-dark-50 hover:bg-dark-500) hover:(bg-primary-100) text-primary-700 flex items-center justify-center rounded-md'
-            }
-            onClick={() => toggleColorScheme()}
-          >
-            <Icon
-              height={24}
-              icon={dark ? 'ic:outline-dark-mode' : 'ic:outline-light-mode'}
-              width={24}
-            />
-          </UnstyledButton>
+        <Group className="w-full" position="center" spacing="xl">
+          <Stack align="center">
+            <Tooltip.Floating label="Redux Toolkit" color="violet">
+              <ActionIcon
+                size={64}
+                color="violet"
+                variant="outline"
+                component="a"
+                href="https://redux-toolkit.js.org/"
+                target="_blank"
+              >
+                <Image src="/redux.svg" height={36} width={36} fit="contain" />
+              </ActionIcon>
+            </Tooltip.Floating>
+            <Badge color="violet">Redux Toolkit</Badge>
+          </Stack>
+          <Stack align="center">
+            <Tooltip.Floating label="React Router" color="red">
+              <ActionIcon
+                size={64}
+                color="red"
+                variant="outline"
+                component="a"
+                href="https://reactrouter.com/en/main"
+                target="_blank"
+              >
+                <Image
+                  src="/react-router.svg"
+                  height={36}
+                  width={36}
+                  fit="contain"
+                />
+              </ActionIcon>
+            </Tooltip.Floating>
+            <Badge color="red">React Router</Badge>
+          </Stack>
+          <Stack align="center">
+            <Tooltip.Floating label="React Hook Form" color="pink">
+              <ActionIcon
+                size={64}
+                color="pink"
+                variant="outline"
+                component="a"
+                href="https://react-hook-form.com/"
+                target="_blank"
+              >
+                <Image
+                  src="/react-hook-form.svg"
+                  height={36}
+                  width={36}
+                  fit="contain"
+                />
+              </ActionIcon>
+            </Tooltip.Floating>
+            <Badge color="pink">React Hook Form</Badge>
+          </Stack>
+          <Stack align="center">
+            <Tooltip.Floating label="TanStack Query" color="orange">
+              <ActionIcon
+                size={64}
+                color="orange"
+                variant="outline"
+                component="a"
+                href="https://tanstack.com/query/v4"
+                target="_blank"
+              >
+                <Image
+                  src="/react-query.svg"
+                  height={36}
+                  width={36}
+                  fit="contain"
+                />
+              </ActionIcon>
+            </Tooltip.Floating>
+            <Badge color="orange">TanStack Query</Badge>
+          </Stack>
+          <Stack align="center">
+            <Tooltip.Floating label="Mantine" color="blue">
+              <ActionIcon
+                size={64}
+                color="blue"
+                variant="outline"
+                component="a"
+                href="https://mantine.dev/"
+                target="_blank"
+              >
+                <Image
+                  src="/mantine.svg"
+                  height={36}
+                  width={36}
+                  fit="contain"
+                />
+              </ActionIcon>
+            </Tooltip.Floating>
+            <Badge color="blue">Mantine</Badge>
+          </Stack>
+          <Stack align="center">
+            <Tooltip.Floating label="WindiCSS" color="sky">
+              <ActionIcon
+                size={64}
+                color="sky"
+                variant="outline"
+                component="a"
+                href="https://windicss.org/"
+                target="_blank"
+              >
+                <Image
+                  src="/windicss.svg"
+                  height={36}
+                  width={36}
+                  fit="contain"
+                />
+              </ActionIcon>
+            </Tooltip.Floating>
+            <Badge color="sky">WindiCSS</Badge>
+          </Stack>
         </Group>
-      </Container>
-    </Box>
+      </Stack>
+
+      <Stack align="center" className="w-3/4" my={20}>
+        <Text size="2xl" align="center">
+          <Icon icon="fluent-emoji-flat:sponge" inline={true} /> Better code
+          style with
+        </Text>
+        <Group position="center">
+          <Badge color="purple">ESlint</Badge>
+          <Badge color="fuchsia">Prettier</Badge>
+          <Badge color="slate">Husky</Badge>
+          <Badge color="indigo">Commitlint</Badge>
+          <Badge color="teal">Lint-staged</Badge>
+          <Badge color="zinc">Editorconfig</Badge>
+        </Group>
+      </Stack>
+      <Stack align="center" className="w-3/4" my={20}>
+        <Text size="2xl" align="center">
+          <Icon
+            icon={`fluent-emoji-flat:${
+              dark ? 'full-moon-face' : 'sun-with-face'
+            }`}
+            inline={true}
+          />{' '}
+          Dark mode ready
+        </Text>
+        <Button variant="light" onClick={() => toggleColorScheme()}>
+          Toggle dark mode
+        </Button>
+      </Stack>
+      <Stack align="center" className="w-3/4" my={20}>
+        <Text size="2xl" align="center">
+          <Icon icon="fluent-emoji-flat:artist-palette" inline={true} />{' '}
+          Pre-configured font pairing
+        </Text>
+        <Group position="center">
+          <Text>Text: Inter</Text>
+          <Title order={4}>Heading: Barlow</Title>
+          <Code color="cyan">Mono: Space Mono</Code>
+          <Text className="!font-serif">Serif: Roboto Slab</Text>
+        </Group>
+      </Stack>
+    </Stack>
   );
 };
 
