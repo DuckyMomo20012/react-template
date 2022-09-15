@@ -22,6 +22,14 @@ import { Link, useLocation } from 'react-router-dom';
 
 import logo from '@/logo.svg';
 
+const paths = [
+  {
+    path: '/',
+    label: 'Home',
+    icon: 'ic:outline-home',
+  },
+];
+
 const Navbar = ({ navBarOpened, setNavBarOpened }) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
@@ -104,28 +112,33 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
               <CloseButton onClick={() => setNavBarOpened(false)} />
             </MantineNavbar.Section>
             <MantineNavbar.Section grow component={ScrollArea}>
-              <NavLink
-                label="Home"
-                component={Link}
-                to="/"
-                active={location.pathname === '/'}
-                icon={<Icon icon="ic:outline-home" height={24} />}
-              />
+              {paths.map((path) => {
+                return (
+                  <NavLink
+                    key={path.path}
+                    label={path.label}
+                    component={Link}
+                    to={path.path}
+                    active={location.pathname === path.path}
+                    icon={<Icon icon={path.icon} height={24} />}
+                    onClick={() => setNavBarOpened(false)}
+                  />
+                );
+              })}
             </MantineNavbar.Section>
             <Divider />
-            <MantineNavbar.Section
-              className="flex items-center justify-center"
-              p="sm"
-            >
-              <Button
-                variant="light"
-                component="a"
-                href="https://github.com/DuckyMomo20012/react-template"
-                target="_blank"
-                leftIcon={<Icon icon="ant-design:github-filled" width={24} />}
-              >
-                Github
-              </Button>
+            <MantineNavbar.Section p="sm">
+              <Group position="center">
+                <Button
+                  variant="light"
+                  component="a"
+                  href="https://github.com/DuckyMomo20012/react-template"
+                  target="_blank"
+                  leftIcon={<Icon icon="ant-design:github-filled" width={24} />}
+                >
+                  Github
+                </Button>
+              </Group>
             </MantineNavbar.Section>
           </MantineNavbar>
         );
