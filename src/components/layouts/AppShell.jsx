@@ -1,50 +1,22 @@
-import { Icon } from '@iconify/react';
-import {
-  Anchor,
-  Text,
-  AppShell as MantineAppShell,
-  Footer,
-  Header as AppShellHeader,
-  Stack,
-  useMantineColorScheme,
-} from '@mantine/core';
+import { AppShell as MantineAppShell, Overlay } from '@mantine/core';
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import { Footer } from '@/components/layouts/Footer';
 import { Header } from '@/components/layouts/Header';
+import { Navbar } from '@/components/layouts/Navbar';
 
 const AppShell = () => {
-  const { colorScheme } = useMantineColorScheme();
-  const dark = colorScheme === 'dark';
+  const [navBarOpened, setNavBarOpened] = useState(false);
+
   return (
     <MantineAppShell
-      footer={
-        <Footer className="!static">
-          <Stack align="center" className="children:w-1/2 items-center">
-            <Text align="center" size="sm">
-              Made with{' '}
-              <Icon
-                icon={`fluent-emoji-flat:${
-                  dark ? 'teacup-without-handle' : 'sparkling-heart'
-                }`}
-                inline={true}
-              />{' '}
-              by{' '}
-              <Anchor href="https://github.com/DuckyMomo20012">
-                Tien Vinh
-              </Anchor>
-            </Text>
-          </Stack>
-        </Footer>
-      }
-      header={
-        <AppShellHeader
-          className="flex items-center justify-between"
-          height={48}
-          px={24}
-        >
-          <Header />
-        </AppShellHeader>
+      footer={<Footer />}
+      header={<Header setNavBarOpened={setNavBarOpened} />}
+      navbar={
+        <Navbar navBarOpened={navBarOpened} setNavBarOpened={setNavBarOpened} />
       }
     >
+      {navBarOpened && <Overlay opacity={0.5} color="black" zIndex={199} />}
       <Outlet />
     </MantineAppShell>
   );
