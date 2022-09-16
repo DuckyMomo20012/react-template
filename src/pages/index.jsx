@@ -60,6 +60,20 @@ const techStack = [
     description: 'CSS framework',
     logoSrc: '/windicss.svg',
   },
+  {
+    name: 'Vitest',
+    color: 'emerald',
+    docLink: 'https://vitest.dev/',
+    description: 'Unit testing',
+    logoSrc: '/vitest.svg',
+  },
+  {
+    name: 'Playwright',
+    color: 'green',
+    docLink: 'https://playwright.dev/',
+    description: 'E2E testing',
+    logoSrc: '/playwright.svg',
+  },
 ];
 
 const HomePage = () => {
@@ -189,7 +203,11 @@ const HomePage = () => {
             />{' '}
             Dark mode ready
           </Text>
-          <Button variant="light" onClick={() => toggleColorScheme()}>
+          <Button
+            data-test-id="demo-color-scheme-toggle"
+            variant="light"
+            onClick={() => toggleColorScheme()}
+          >
             Toggle dark mode
           </Button>
         </Stack>

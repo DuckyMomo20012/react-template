@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "github.copilot",
+    "ms-playwright.playwright",
+    "esbenp.prettier-vscode",
+    "bmalehorn.print-it",
+    "stkb.rewrap",
+    "wayou.vscode-todo-highlight",
+    "pflannery.vscode-versionlens",
+    "zixuanchen.vitest-explorer",
+    "voorjaar.windicss-intellisense",
+    "eamodio.gitlens",
+    "dbaeumer.vscode-eslint",
+    "usernamehw.errorlens",
+    "mikestead.dotenv",
+    "naumovs.color-highlight",
+    "streetsidesoftware.code-spell-checker",
+    "pustelto.bracketeer",
+    "chunsen.bracket-select",
+    "bradgashler.htmltagwrap",
+    "kisstkondoros.vscode-gutter-preview"
+  ]
+}
