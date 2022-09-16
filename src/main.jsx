@@ -5,13 +5,12 @@ import 'virtual:windi.css';
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import {
   MantineProvider,
   QueryProvider,
   ReduxProvider,
+  RouterProvider,
 } from '@/context/index.js';
-import { CustomRoute } from '@/routes/CustomRoute.jsx';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -19,13 +18,11 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <ReduxProvider>
-      <BrowserRouter>
-        <QueryProvider>
-          <MantineProvider>
-            <CustomRoute />
-          </MantineProvider>
-        </QueryProvider>
-      </BrowserRouter>
+      <QueryProvider>
+        <MantineProvider>
+          <RouterProvider />
+        </MantineProvider>
+      </QueryProvider>
     </ReduxProvider>
   </React.StrictMode>,
 );

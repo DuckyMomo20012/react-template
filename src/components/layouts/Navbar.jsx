@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import {
   Navbar as MantineNavbar,
-  NavLink,
+  NavLink as MantineNavLink,
   ScrollArea,
   CloseButton,
   useMantineColorScheme,
@@ -18,7 +18,7 @@ import {
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import logo from '@/logo.svg';
 
@@ -34,7 +34,6 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
   const matches = useMediaQuery('(min-width: 640px)');
-  const location = useLocation();
 
   useEffect(() => {
     if (navBarOpened) {
@@ -116,13 +115,20 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
                 return (
                   <NavLink
                     key={path.path}
-                    label={path.label}
-                    component={Link}
                     to={path.path}
-                    active={location.pathname === path.path}
-                    icon={<Icon icon={path.icon} height={24} />}
-                    onClick={() => setNavBarOpened(false)}
-                  />
+                    className="no-underline"
+                  >
+                    {({ isActive }) => {
+                      return (
+                        <MantineNavLink
+                          label={path.label}
+                          active={isActive}
+                          icon={<Icon icon={path.icon} height={24} />}
+                          onClick={() => setNavBarOpened(false)}
+                        />
+                      );
+                    }}
+                  </NavLink>
                 );
               })}
             </MantineNavbar.Section>
