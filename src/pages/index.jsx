@@ -17,6 +17,65 @@ import {
   Space,
 } from '@mantine/core';
 
+const techStack = [
+  {
+    name: 'Redux Toolkit',
+    color: 'violet',
+    docLink: 'https://redux-toolkit.js.org/',
+    description: 'State management',
+    logoSrc: '/redux.svg',
+  },
+  {
+    name: 'React Router',
+    color: 'red',
+    docLink: 'https://reactrouter.com/en/main',
+    description: 'Routing',
+    logoSrc: '/react-router.svg',
+  },
+  {
+    name: 'React Hook Form',
+    color: 'pink',
+    docLink: 'https://react-hook-form.com/',
+    description: 'Forms',
+    logoSrc: '/react-hook-form.svg',
+  },
+  {
+    name: 'TanStack Query',
+    color: 'orange',
+    docLink: 'https://tanstack.com/query/v4',
+    description: 'Data fetching',
+    logoSrc: '/react-query.svg',
+  },
+  {
+    name: 'Mantine',
+    color: 'blue',
+    docLink: 'https://mantine.dev/',
+    description: 'UI library',
+    logoSrc: '/mantine.svg',
+  },
+  {
+    name: 'WindiCSS',
+    color: 'sky',
+    docLink: 'https://windicss.org/',
+    description: 'CSS framework',
+    logoSrc: '/windicss.svg',
+  },
+  {
+    name: 'Vitest',
+    color: 'emerald',
+    docLink: 'https://vitest.dev/',
+    description: 'Unit testing',
+    logoSrc: '/vitest.svg',
+  },
+  {
+    name: 'Playwright',
+    color: 'green',
+    docLink: 'https://playwright.dev/',
+    description: 'E2E testing',
+    logoSrc: '/playwright.svg',
+  },
+];
+
 const HomePage = () => {
   const theme = useMantineTheme();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -40,16 +99,21 @@ const HomePage = () => {
           style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)' }}
         />
       </Group>
-      <Title className="text-5xl" align="center">
+      <Title className="text-4xl" align="center">
         Vite + React
       </Title>
 
-      <Title order={2} className="text-5xl" align="center">
+      <Title
+        order={2}
+        variant="gradient"
+        gradient={{ from: 'purple', to: 'cyan', deg: 45 }}
+        align="center"
+      >
         Features
       </Title>
 
       <SimpleGrid
-        className="children:(p-5 border-dashed) children:(border-3 rounded-md) children:border-gray-400 w-2/3 md:auto-cols-min lg:auto-rows-fr"
+        className="children:(p-5 border-dashed) children:(border-3 rounded-md) children:border-gray-400 w-2/3 lg:auto-cols-min xl:auto-rows-fr"
         breakpoints={[
           { minWidth: 'sm', cols: 1 },
           { minWidth: 'md', cols: 2 },
@@ -65,126 +129,31 @@ const HomePage = () => {
             included
           </Text>
           <Group className="w-full" position="center" spacing="xl">
-            <Stack align="center">
-              <Tooltip.Floating label="Redux Toolkit" color="violet">
-                <ActionIcon
-                  size={64}
-                  color="violet"
-                  variant="outline"
-                  component="a"
-                  href="https://redux-toolkit.js.org/"
-                  target="_blank"
-                >
-                  <Image
-                    src="/redux.svg"
-                    height={36}
-                    width={36}
-                    fit="contain"
-                  />
-                </ActionIcon>
-              </Tooltip.Floating>
-              <Badge color="violet">Redux Toolkit</Badge>
-            </Stack>
-            <Stack align="center">
-              <Tooltip.Floating label="React Router" color="red">
-                <ActionIcon
-                  size={64}
-                  color="red"
-                  variant="outline"
-                  component="a"
-                  href="https://reactrouter.com/en/main"
-                  target="_blank"
-                >
-                  <Image
-                    src="/react-router.svg"
-                    height={36}
-                    width={36}
-                    fit="contain"
-                  />
-                </ActionIcon>
-              </Tooltip.Floating>
-              <Badge color="red">React Router</Badge>
-            </Stack>
-            <Stack align="center">
-              <Tooltip.Floating label="React Hook Form" color="pink">
-                <ActionIcon
-                  size={64}
-                  color="pink"
-                  variant="outline"
-                  component="a"
-                  href="https://react-hook-form.com/"
-                  target="_blank"
-                >
-                  <Image
-                    src="/react-hook-form.svg"
-                    height={36}
-                    width={36}
-                    fit="contain"
-                  />
-                </ActionIcon>
-              </Tooltip.Floating>
-              <Badge color="pink">React Hook Form</Badge>
-            </Stack>
-            <Stack align="center">
-              <Tooltip.Floating label="TanStack Query" color="orange">
-                <ActionIcon
-                  size={64}
-                  color="orange"
-                  variant="outline"
-                  component="a"
-                  href="https://tanstack.com/query/v4"
-                  target="_blank"
-                >
-                  <Image
-                    src="/react-query.svg"
-                    height={36}
-                    width={36}
-                    fit="contain"
-                  />
-                </ActionIcon>
-              </Tooltip.Floating>
-              <Badge color="orange">TanStack Query</Badge>
-            </Stack>
-            <Stack align="center">
-              <Tooltip.Floating label="Mantine" color="blue">
-                <ActionIcon
-                  size={64}
-                  color="blue"
-                  variant="outline"
-                  component="a"
-                  href="https://mantine.dev/"
-                  target="_blank"
-                >
-                  <Image
-                    src="/mantine.svg"
-                    height={36}
-                    width={36}
-                    fit="contain"
-                  />
-                </ActionIcon>
-              </Tooltip.Floating>
-              <Badge color="blue">Mantine</Badge>
-            </Stack>
-            <Stack align="center">
-              <Tooltip.Floating label="WindiCSS" color="sky">
-                <ActionIcon
-                  size={64}
-                  color="sky"
-                  variant="outline"
-                  component="a"
-                  href="https://windicss.org/"
-                  target="_blank"
-                >
-                  <Image
-                    src="/windicss.svg"
-                    height={36}
-                    width={36}
-                    fit="contain"
-                  />
-                </ActionIcon>
-              </Tooltip.Floating>
-              <Badge color="sky">WindiCSS</Badge>
-            </Stack>
+            {techStack.map(({ name, color, docLink, description, logoSrc }) => {
+              return (
+                <Stack align="center" key={name}>
+                  <Tooltip.Floating label={description} color={color}>
+                    <ActionIcon
+                      size={64}
+                      color={color}
+                      variant="outline"
+                      component="a"
+                      href={docLink || '#'}
+                      target="_blank"
+                    >
+                      <Image
+                        src={logoSrc}
+                        height={36}
+                        width={36}
+                        fit="contain"
+                        withPlaceholder
+                      />
+                    </ActionIcon>
+                  </Tooltip.Floating>
+                  <Badge color={color}>{name}</Badge>
+                </Stack>
+              );
+            })}
           </Group>
         </Stack>
 
@@ -234,7 +203,11 @@ const HomePage = () => {
             />{' '}
             Dark mode ready
           </Text>
-          <Button variant="light" onClick={() => toggleColorScheme()}>
+          <Button
+            data-test-id="demo-color-scheme-toggle"
+            variant="light"
+            onClick={() => toggleColorScheme()}
+          >
             Toggle dark mode
           </Button>
         </Stack>

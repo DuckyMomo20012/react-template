@@ -61,6 +61,7 @@ const Header = ({ setNavBarOpened }) => {
               size="lg"
               variant="outline"
               className="!sm:flex !hidden"
+              data-test-id="color-scheme-toggle"
             >
               <Icon
                 icon={dark ? 'ic:outline-dark-mode' : 'ic:outline-light-mode'}
@@ -72,6 +73,7 @@ const Header = ({ setNavBarOpened }) => {
             <Anchor
               href="https://github.com/DuckyMomo20012/react-template"
               target="_blank"
+              data-test-id="github-link"
             >
               <ActionIcon size="lg" variant="outline">
                 <Icon icon="ant-design:github-filled" width={24} />

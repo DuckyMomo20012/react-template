@@ -1,5 +1,5 @@
 import {
-  MantineProvider as DefaultMantineProvider,
+  MantineProvider as BaseMantineProvider,
   DEFAULT_THEME as mantineDefaultTheme,
   ColorSchemeProvider,
   Global,
@@ -110,14 +110,14 @@ const MantineProvider = ({ children }) => {
       colorScheme={colorScheme}
       toggleColorScheme={toggleColorScheme}
     >
-      <DefaultMantineProvider
+      <BaseMantineProvider
         theme={{ ...theme, colorScheme }}
         withGlobalStyles
         withNormalizeCSS
       >
         <MyGlobalStyles />
         {children}
-      </DefaultMantineProvider>
+      </BaseMantineProvider>
     </ColorSchemeProvider>
   );
 };

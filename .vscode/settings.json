@@ -1,0 +1,5 @@
+{
+  "vitest.enable": true,
+  "vitest.commandLine": "yarn test",
+  "playwright.reuseBrowser": false
+}

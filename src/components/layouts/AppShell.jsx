@@ -5,7 +5,7 @@ import { Footer } from '@/components/layouts/Footer';
 import { Header } from '@/components/layouts/Header';
 import { Navbar } from '@/components/layouts/Navbar';
 
-const AppShell = () => {
+const AppShell = ({ children }) => {
   const [navBarOpened, setNavBarOpened] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const AppShell = () => {
       }
     >
       {navBarOpened && <Overlay opacity={0.5} color="black" zIndex={199} />}
-      <Outlet />
+      {children || <Outlet />}
     </MantineAppShell>
   );
 };
