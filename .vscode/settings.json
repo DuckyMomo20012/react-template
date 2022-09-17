@@ -1,5 +1,12 @@
 {
   "vitest.enable": true,
-  "vitest.commandLine": "yarn test",
+  "vitest.commandLine": "yarn test --",
+  "vitest.exclude": [
+    "**/tests/**",
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/cypress/**",
+    "**/.{idea,git,cache,output,temp}/**"
+  ],
   "playwright.reuseBrowser": false
 }
