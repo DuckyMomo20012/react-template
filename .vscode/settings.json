@@ -1,5 +1,39 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.sortImports": false
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.wordWrap": "on",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.autoClosingTags": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifierEnding": "index",
+  "javascript.preferences.jsxAttributeCompletionStyle": "auto",
+  "javascript.preferences.quoteStyle": "double",
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.paths": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": true,
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.autoWrap.notification": "text",
+  "rewrap.wrappingColumn": 80,
   "vitest.enable": true,
-  "vitest.commandLine": "yarn test",
+  "vitest.commandLine": "yarn test --",
+  "vitest.exclude": [
+    "**/tests/**",
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/cypress/**",
+    "**/.{idea,git,cache,output,temp}/**"
+  ],
   "playwright.reuseBrowser": false
 }

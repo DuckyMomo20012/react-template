@@ -76,9 +76,9 @@
 
 <div align="center">
   <p>Light mode</p>
-  <img src="https://user-images.githubusercontent.com/64480713/190404779-c2cbc0ef-a317-4590-ae9a-d85ae2294fcc.png" alt="screenshot" />
+  <img src="https://user-images.githubusercontent.com/64480713/190858691-0c319454-f510-4b74-8402-72821ec9191b.png" alt="screenshot" />
   <p>Dark mode</p>
-  <img src="https://user-images.githubusercontent.com/64480713/190404763-cd8d9a2b-4124-4fa4-859b-dbb127eaf830.png" alt="screenshot_dark_mode" />
+  <img src="https://user-images.githubusercontent.com/64480713/190858686-62d1b593-e154-4623-911e-6e2e0e497104.png" alt="screenshot_dark_mode" />
 </div>
 
 <!-- TechStack -->
@@ -99,6 +99,8 @@
     <li><a href="https://eslint.org/">ESLint</a></li>
     <li><a href="https://prettier.io/">Prettier</a></li>
     <li><a href="https://vitejs.dev/">Vite</a></li>
+    <li><a href="https://vitest.dev/">Vitest</a></li>
+    <li><a href="https://playwright.dev/">Playwright</a></li>
     <li><a href="https://iconify.design/">Iconify</a></li>
   </ul>
 </details>
