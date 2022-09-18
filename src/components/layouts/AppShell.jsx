@@ -10,6 +10,7 @@ const AppShell = ({ children }) => {
 
   return (
     <MantineAppShell
+      className="relative"
       footer={<Footer />}
       header={<Header setNavBarOpened={setNavBarOpened} />}
       navbar={

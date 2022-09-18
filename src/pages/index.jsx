@@ -112,14 +112,7 @@ const HomePage = () => {
         Features
       </Title>
 
-      <SimpleGrid
-        className="children:(p-5 border-dashed) children:(border-3 rounded-md) children:border-gray-400 w-2/3 lg:auto-cols-min xl:auto-rows-fr"
-        breakpoints={[
-          { minWidth: 'sm', cols: 1 },
-          { minWidth: 'md', cols: 2 },
-          { minWidth: 'lg', cols: 3 },
-        ]}
-      >
+      <SimpleGrid className="children:(p-5 border-dashed) children:(border-3 rounded-md) children:border-gray-400 w-2/3 lg:auto-cols-min xl:auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <Stack
           align="center"
           className="col-span-1 md:col-span-2 lg:col-span-3"
