@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <MantineFooter className="!static">
       <Stack align="center" className="children:w-1/2 items-center">
-        <Text align="center" size="sm">
+        <Text align="center" size="sm" className="w-full">
           Made with{' '}
           <Icon
             icon={`fluent-emoji-flat:${
