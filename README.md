@@ -183,10 +183,10 @@ variables.
 
 ### :bangbang: Prerequisites
 
-This project uses [Yarn](https://yarnpkg.com/) as package manager:
+This project uses [pnPM](https://pnpm.io/) as package manager:
 
 ```bash
-npm install --global yarn
+npm install --global pnpm
 ```
 
 <!-- Run Locally -->
@@ -208,13 +208,13 @@ cd react-template
 Install dependencies:
 
 ```bash
-yarn
+pnpm i
 ```
 
 Start the server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 <!-- Running Tests -->
@@ -224,7 +224,7 @@ yarn dev
 To run tests, run the following command:
 
 ```bash
-yarn test
+pnpm test
 ```
 
 <!-- Deployment -->
@@ -234,7 +234,7 @@ yarn test
 To deploy this project run:
 
 ```bash
-yarn deploy
+pnpm deploy
 ```
 
 <!-- Usage -->
