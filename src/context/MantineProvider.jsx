@@ -1,8 +1,8 @@
 import {
   MantineProvider as BaseMantineProvider,
-  DEFAULT_THEME as mantineDefaultTheme,
   ColorSchemeProvider,
   Global,
+  DEFAULT_THEME as mantineDefaultTheme,
 } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import windiColors from 'windicss/colors';

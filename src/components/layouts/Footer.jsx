@@ -1,8 +1,8 @@
 import { Icon } from '@iconify/react';
 import {
+  Anchor,
   Footer as MantineFooter,
   Stack,
-  Anchor,
   Text,
   useMantineColorScheme,
 } from '@mantine/core';
@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <MantineFooter className="!static">
       <Stack align="center" className="children:w-1/2 items-center">
-        <Text align="center" size="sm" className="w-full">
+        <Text align="center" className="w-full" size="sm">
           Made with{' '}
           <Icon
             icon={`fluent-emoji-flat:${

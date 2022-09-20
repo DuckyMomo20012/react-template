@@ -2,14 +2,14 @@ import { Icon } from '@iconify/react';
 import {
   ActionIcon,
   Anchor,
-  Group,
-  Tooltip,
-  Text,
-  useMantineColorScheme,
-  Space,
-  Image,
   Box,
+  Group,
+  Image,
   Header as MantineHeader,
+  Space,
+  Text,
+  Tooltip,
+  useMantineColorScheme,
 } from '@mantine/core';
 import { Link } from 'react-router-dom';
 
@@ -21,47 +21,47 @@ const Header = ({ setNavBarOpened }) => {
 
   return (
     <MantineHeader height={48} px={24}>
-      <Group className="h-full" position="apart" noWrap>
+      <Group className="h-full" noWrap position="apart">
         <Icon
+          className="block sm:hidden"
+          height={24}
           icon="ic:baseline-menu"
           onClick={() => {
             setNavBarOpened((prevNavBarOpened) => !prevNavBarOpened);
           }}
-          className="block sm:hidden"
-          height={24}
         />
-        <Group position="left" className="!sm:flex !hidden !flex-grow">
+        <Group className="!sm:flex !hidden !flex-grow" position="left">
           <Anchor
-            underline={false}
-            spacing="xs"
-            component={Link}
-            to="/"
             className="flex items-center gap-2"
+            component={Link}
+            spacing="xs"
+            to="/"
+            underline={false}
           >
             <Box component="span">
               <Image
-                src={logo}
-                height={32}
-                width={32}
                 className="animate-duration-5000 animate-spin"
+                height={32}
+                src={logo}
+                width={32}
               />
             </Box>
             <Text align="center">React Template</Text>
           </Anchor>
           <Space w="xl" />
-          <Anchor underline={false} component={Link} to="/">
+          <Anchor component={Link} to="/" underline={false}>
             Home
           </Anchor>
         </Group>
         <Group>
           <Tooltip label={dark ? 'Light mode' : 'Dark mode'}>
             <ActionIcon
+              className="!sm:flex !hidden"
               color="blue"
+              data-test-id="color-scheme-toggle"
               onClick={() => toggleColorScheme()}
               size="lg"
               variant="outline"
-              className="!sm:flex !hidden"
-              data-test-id="color-scheme-toggle"
             >
               <Icon
                 icon={dark ? 'ic:outline-dark-mode' : 'ic:outline-light-mode'}
@@ -71,9 +71,9 @@ const Header = ({ setNavBarOpened }) => {
           </Tooltip>
           <Tooltip label="Source code">
             <Anchor
+              data-test-id="github-link"
               href="https://github.com/DuckyMomo20012/react-template"
               target="_blank"
-              data-test-id="github-link"
             >
               <ActionIcon size="lg" variant="outline">
                 <Icon icon="ant-design:github-filled" width={24} />
