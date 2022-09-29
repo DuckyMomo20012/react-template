@@ -1,20 +1,20 @@
 import { Icon } from '@iconify/react';
 import {
-  Navbar as MantineNavbar,
-  NavLink as MantineNavLink,
-  ScrollArea,
-  CloseButton,
-  useMantineColorScheme,
+  ActionIcon,
   Anchor,
   Box,
-  Image,
-  Text,
-  Group,
-  Tooltip,
-  ActionIcon,
   Button,
-  Transition,
+  CloseButton,
   Divider,
+  Group,
+  Image,
+  NavLink as MantineNavLink,
+  Navbar as MantineNavbar,
+  ScrollArea,
+  Text,
+  Tooltip,
+  Transition,
+  useMantineColorScheme,
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useEffect } from 'react';
@@ -51,20 +51,20 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
 
   return (
     <Transition
+      duration={100}
       mounted={navBarOpened}
+      timingFunction="ease"
       transition={{
         in: { opacity: 1, transform: 'translateX(0)' },
         out: { opacity: 0, transform: 'translateX(-100%)' },
       }}
-      duration={100}
-      timingFunction="ease"
     >
       {(styles) => {
         return (
           <MantineNavbar
             // hiddenBreakpoint="sm"
             // NOTE: Don't set this because we want animation to work
-            // hidden={!navBarOpened}
+            // Hidden={!navBarOpened}
             className="!sm:hidden !w-9/10 !z-200 !top-0 shadow-md"
             style={styles}
           >
@@ -72,20 +72,20 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
               className="flex items-center justify-between gap-2"
               p="sm"
             >
-              <Group noWrap className="min-w-0">
+              <Group className="min-w-0" noWrap>
                 <Anchor
-                  underline={false}
-                  spacing="xs"
-                  component={Link}
-                  to="/"
                   className="flex min-w-0 items-center gap-2"
+                  component={Link}
+                  spacing="xs"
+                  to="/"
+                  underline={false}
                 >
                   <Box component="span">
                     <Image
-                      src={logo}
-                      height={32}
-                      width={32}
                       className="animate-duration-5000 animate-spin"
+                      height={32}
+                      src={logo}
+                      width={32}
                     />
                   </Box>
                   <Text align="center" className="w-full truncate">
@@ -110,20 +110,20 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
               </Group>
               <CloseButton onClick={() => setNavBarOpened(false)} />
             </MantineNavbar.Section>
-            <MantineNavbar.Section grow component={ScrollArea}>
+            <MantineNavbar.Section component={ScrollArea} grow>
               {paths.map((path) => {
                 return (
                   <NavLink
+                    className="no-underline"
                     key={path.path}
                     to={path.path}
-                    className="no-underline"
                   >
                     {({ isActive }) => {
                       return (
                         <MantineNavLink
-                          label={path.label}
                           active={isActive}
-                          icon={<Icon icon={path.icon} height={24} />}
+                          icon={<Icon height={24} icon={path.icon} />}
+                          label={path.label}
                           onClick={() => setNavBarOpened(false)}
                         />
                       );
@@ -136,11 +136,11 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
             <MantineNavbar.Section p="sm">
               <Group position="center">
                 <Button
-                  variant="light"
                   component="a"
                   href="https://github.com/DuckyMomo20012/react-template"
-                  target="_blank"
                   leftIcon={<Icon icon="ant-design:github-filled" width={24} />}
+                  target="_blank"
+                  variant="light"
                 >
                   Github
                 </Button>

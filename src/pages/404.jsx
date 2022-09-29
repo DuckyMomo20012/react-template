@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
-    <Stack className="w-full h-full" align="center" justify="center">
+    <Stack align="center" className="w-full h-full" justify="center">
       <Stack align="center" className="w-1/2">
-        <Text color="gray" className="text-240px">
+        <Text className="text-240px" color="gray">
           404
         </Text>
         <Title align="center">You have found a secret place.</Title>
@@ -15,7 +15,7 @@ const NotFound = () => {
           address, or the page has been moved to another URL.
         </Text>
         <Group position="center">
-          <Button component={Link} to="/" size="md" variant="subtle">
+          <Button component={Link} size="md" to="/" variant="subtle">
             Take me back to home page
           </Button>
         </Group>

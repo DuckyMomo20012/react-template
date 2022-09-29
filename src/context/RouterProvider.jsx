@@ -1,6 +1,6 @@
 import {
-  createBrowserRouter,
   RouterProvider as BaseRouterProvider,
+  createBrowserRouter,
 } from 'react-router-dom';
 import { AppShell } from '@/components/layouts/AppShell.jsx';
 import { NotFound } from '@/pages/404.jsx';

@@ -1,20 +1,20 @@
 import { Icon } from '@iconify/react';
 import {
-  Text,
-  Title,
-  Stack,
   ActionIcon,
+  Badge,
+  Button,
+  Code,
+  ColorSwatch,
   Group,
   Image,
-  Tooltip,
-  useMantineColorScheme,
-  Button,
-  Badge,
-  Code,
-  useMantineTheme,
-  ColorSwatch,
   SimpleGrid,
   Space,
+  Stack,
+  Text,
+  Title,
+  Tooltip,
+  useMantineColorScheme,
+  useMantineTheme,
 } from '@mantine/core';
 
 const techStack = [
@@ -83,31 +83,31 @@ const HomePage = () => {
 
   return (
     <Stack align="center">
-      <Group position="center" grow spacing="xl">
+      <Group grow position="center" spacing="xl">
         <Image
-          src="/vite.svg"
-          height={80}
-          fit="contain"
           className="hover:filter"
+          fit="contain"
+          height={80}
+          src="/vite.svg"
           style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)' }}
         />
         <Image
-          src="/react.svg"
-          height={80}
-          fit="contain"
           className="animate-duration-10000 animate-spin hover:filter"
+          fit="contain"
+          height={80}
+          src="/react.svg"
           style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)' }}
         />
       </Group>
-      <Title className="text-4xl" align="center">
+      <Title align="center" className="text-4xl">
         Vite + React
       </Title>
 
       <Title
+        align="center"
+        gradient={{ from: 'purple', to: 'cyan', deg: 45 }}
         order={2}
         variant="gradient"
-        gradient={{ from: 'purple', to: 'cyan', deg: 45 }}
-        align="center"
       >
         Features
       </Title>
@@ -117,7 +117,7 @@ const HomePage = () => {
           align="center"
           className="col-span-1 md:col-span-2 lg:col-span-3"
         >
-          <Text size="xl" align="center">
+          <Text align="center" size="xl">
             <Icon icon="fluent-emoji-flat:high-voltage" inline /> Batteries
             included
           </Text>
@@ -125,20 +125,20 @@ const HomePage = () => {
             {techStack.map(({ name, color, docLink, description, logoSrc }) => {
               return (
                 <Stack align="center" key={name}>
-                  <Tooltip.Floating label={description} color={color}>
+                  <Tooltip.Floating color={color} label={description}>
                     <ActionIcon
-                      size={64}
                       color={color}
-                      variant="outline"
                       component="a"
                       href={docLink || '#'}
+                      size={64}
                       target="_blank"
+                      variant="outline"
                     >
                       <Image
-                        src={logoSrc}
-                        height={36}
-                        width={36}
                         fit="contain"
+                        height={36}
+                        src={logoSrc}
+                        width={36}
                         withPlaceholder
                       />
                     </ActionIcon>
@@ -151,7 +151,7 @@ const HomePage = () => {
         </Stack>
 
         <Stack align="center">
-          <Text size="xl" align="center">
+          <Text align="center" size="xl">
             <Icon icon="fluent-emoji-flat:sponge" inline /> Better code style
             with
           </Text>
@@ -166,7 +166,7 @@ const HomePage = () => {
         </Stack>
 
         <Stack align="center">
-          <Text size="xl" align="center">
+          <Text align="center" size="xl">
             <Icon icon="fluent-emoji-flat:artist-palette" inline /> Extended
             WindiCSS color palette
           </Text>
@@ -174,10 +174,10 @@ const HomePage = () => {
             {Object.keys(theme.colors).map((color) => {
               return (
                 <Tooltip.Floating
+                  className="capitalize"
+                  color={color}
                   key={color}
                   label={color}
-                  color={color}
-                  className="capitalize"
                 >
                   <ColorSwatch color={theme.colors[color][4]} />
                 </Tooltip.Floating>
@@ -187,7 +187,7 @@ const HomePage = () => {
         </Stack>
 
         <Stack align="center">
-          <Text size="xl" align="center">
+          <Text align="center" size="xl">
             <Icon
               icon={`fluent-emoji-flat:${
                 dark ? 'full-moon-face' : 'sun-with-face'
@@ -198,15 +198,15 @@ const HomePage = () => {
           </Text>
           <Button
             data-test-id="demo-color-scheme-toggle"
-            variant="light"
             onClick={() => toggleColorScheme()}
+            variant="light"
           >
             Toggle dark mode
           </Button>
         </Stack>
 
         <Stack align="center">
-          <Text size="xl" align="center">
+          <Text align="center" size="xl">
             <Icon icon="fluent-emoji-flat:input-latin-lowercase" inline />{' '}
             Pre-configured font pairing
           </Text>
@@ -218,35 +218,35 @@ const HomePage = () => {
           </Group>
         </Stack>
         <Stack align="center">
-          <Text size="xl" align="center">
+          <Text align="center" size="xl">
             <Icon icon="fluent-emoji-flat:dizzy" inline /> Animation is easy
             with plugins
           </Text>
           <Group
-            position="center"
             className="children:(animate animate-infinite animate-duration-3000)"
+            position="center"
           >
-            <Badge color="yellow" className="animate-tada">
+            <Badge className="animate-tada" color="yellow">
               Tada
             </Badge>
-            <Badge color="lime" className="animate-wobble">
+            <Badge className="animate-wobble" color="lime">
               Wobble
             </Badge>
-            <Badge color="rose" className="animate-swing">
+            <Badge className="animate-swing" color="rose">
               Swing
             </Badge>
-            <Badge color="cyan" className="animate-jello">
+            <Badge className="animate-jello" color="cyan">
               Jello
             </Badge>
           </Group>
         </Stack>
 
         <Stack align="center">
-          <Text size="xl" align="center">
+          <Text align="center" size="xl">
             <Icon icon="fluent-emoji-flat:locked" inline /> Type-safe all the
             way with TypeScript
           </Text>
-          <Text transform="uppercase" align="center" color="dimmed">
+          <Text align="center" color="dimmed" transform="uppercase">
             <Icon icon="fluent-emoji-flat:construction" inline /> Coming Soon{' '}
             <Icon icon="fluent-emoji-flat:construction" inline />
           </Text>

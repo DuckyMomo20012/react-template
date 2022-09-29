@@ -17,7 +17,7 @@ const AppShell = ({ children }) => {
         <Navbar navBarOpened={navBarOpened} setNavBarOpened={setNavBarOpened} />
       }
     >
-      {navBarOpened && <Overlay opacity={0.5} color="black" zIndex={199} />}
+      {navBarOpened && <Overlay color="black" opacity={0.5} zIndex={199} />}
       {children || <Outlet />}
     </MantineAppShell>
   );

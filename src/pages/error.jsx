@@ -1,4 +1,4 @@
-import { Stack, Button, Group, Text, Title } from '@mantine/core';
+import { Button, Group, Stack, Text, Title } from '@mantine/core';
 import {
   isRouteErrorResponse,
   useNavigate,
@@ -16,9 +16,9 @@ function ErrorBoundary() {
   }
 
   return (
-    <Stack className="w-full h-full" align="center" justify="center">
+    <Stack align="center" className="w-full h-full" justify="center">
       <Stack align="center" className="w-1/2">
-        <Text color="gray" className="text-240px">
+        <Text className="text-240px" color="gray">
           {errorStatus}
         </Text>
         <Title align="center">Something bad just happened...</Title>
