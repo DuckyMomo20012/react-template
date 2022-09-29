@@ -18,17 +18,13 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "babelOptions": {
-      "presets": ["@babel/preset-react"]
-    },
     "ecmaFeatures": {
-      "ecmaVersion": 2022,
       "jsx": true
     },
-    "requireConfigFile": false,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "import", "@typescript-eslint"],
+  "plugins": ["react", "import"],
   "rules": {
     "eqeqeq": "warn",
     "import/extensions": "off",
@@ -77,6 +73,6 @@
     "react": {
       "version": "detect"
     },
-    "import/resolver": { "typescript": true }
+    "import/resolver": { "typescript": {} }
   }
 }
