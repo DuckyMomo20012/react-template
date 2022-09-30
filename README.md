@@ -183,7 +183,7 @@ variables.
 
 ### :bangbang: Prerequisites
 
-This project uses [pnPM](https://pnpm.io/) as package manager:
+This project uses [pnpm](https://pnpm.io/) as package manager:
 
 ```bash
 npm install --global pnpm
@@ -208,7 +208,7 @@ cd react-template
 Install dependencies:
 
 ```bash
-pnpm i
+pnpm install
 ```
 
 Start the server:
