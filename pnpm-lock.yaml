@@ -6,12 +6,12 @@ specifiers:
   '@commitlint/config-conventional': 17.1.0
   '@emotion/react': 11.10.4
   '@iconify/react': 4.0.0
-  '@mantine/core': 5.4.2
-  '@mantine/hooks': 5.4.2
+  '@mantine/core': 5.5.0
+  '@mantine/hooks': 5.5.0
   '@playwright/test': 1.26.1
   '@reduxjs/toolkit': 1.8.5
-  '@tanstack/react-query': 4.7.2
-  '@tanstack/react-query-devtools': 4.7.2
+  '@tanstack/react-query': 4.9.0
+  '@tanstack/react-query-devtools': 4.9.0
   '@typescript-eslint/eslint-plugin': 5.38.1
   '@typescript-eslint/parser': 5.38.1
   '@vitejs/plugin-react': 2.1.0
@@ -45,11 +45,11 @@ specifiers:
 dependencies:
   '@emotion/react': 11.10.4_b6k74wvxdvqypha4emuv7fd2ke
   '@iconify/react': 4.0.0_react@18.2.0
-  '@mantine/core': 5.4.2_avizss4y7enqfazm7itl7dw6mm
-  '@mantine/hooks': 5.4.2_react@18.2.0
+  '@mantine/core': 5.5.0_2t5gkyrxqo7a74v5x3cr7mfqby
+  '@mantine/hooks': 5.5.0_react@18.2.0
   '@reduxjs/toolkit': 1.8.5_kuo2ie247izvzll3jejufdtq3q
-  '@tanstack/react-query': 4.7.2_biqbaboplfbrettd7655fr4n2y
-  '@tanstack/react-query-devtools': 4.7.2_5y6winp2ndk3p734flb325i4v4
+  '@tanstack/react-query': 4.9.0_biqbaboplfbrettd7655fr4n2y
+  '@tanstack/react-query-devtools': 4.9.0_deywjuordwfceo4ntvg532uqbq
   axios: 0.27.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -762,17 +762,17 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@mantine/core/5.4.2_avizss4y7enqfazm7itl7dw6mm:
-    resolution: {integrity: sha512-4u9351HKXIJKMNyILoxeYQO+HkyM5lVD5qFueswraradtU5dcYYJ8Tv0Ge5EiVdVGE4oKHKg+fdfIIcdPlI9qQ==}
+  /@mantine/core/5.5.0_2t5gkyrxqo7a74v5x3cr7mfqby:
+    resolution: {integrity: sha512-bMYG3za1UOEUaM01MCRWY0/nFdSj7DTE9+WV95v+wejHVOIvzX1/P3ukzbDKbtVsfWbguFRR4E4ajc2RENcg8g==}
     peerDependencies:
-      '@mantine/hooks': 5.4.2
+      '@mantine/hooks': 5.5.0
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       '@floating-ui/react-dom-interactions': 0.10.1_biqbaboplfbrettd7655fr4n2y
-      '@mantine/hooks': 5.4.2_react@18.2.0
-      '@mantine/styles': 5.4.2_7xbt6cqxny5okm7nuwm4cfiesq
-      '@mantine/utils': 5.4.2_react@18.2.0
+      '@mantine/hooks': 5.5.0_react@18.2.0
+      '@mantine/styles': 5.5.0_7xbt6cqxny5okm7nuwm4cfiesq
+      '@mantine/utils': 5.5.0_react@18.2.0
       '@radix-ui/react-scroll-area': 1.0.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -782,16 +782,16 @@ packages:
       - '@types/react'
     dev: false
 
-  /@mantine/hooks/5.4.2_react@18.2.0:
-    resolution: {integrity: sha512-JnRsWYV0AWPd249qtkmTWDAbxsBf7vxf8jGUVYHCI7Wz6Ukw0PnnzjEkPCdfwuiuiVk1+wnQ/qVIKqHzu2kdVQ==}
+  /@mantine/hooks/5.5.0_react@18.2.0:
+    resolution: {integrity: sha512-Z7He/2beF+SWp4a78oDLJrZFN+hVDLtxeCxRoKQAhpABOXA0Mm9Km4CZKf5Ekh4/RpS0BfRkNmQimckTN2GcJw==}
     peerDependencies:
       react: '>=16.8.0'
     dependencies:
       react: 18.2.0
     dev: false
 
-  /@mantine/styles/5.4.2_7xbt6cqxny5okm7nuwm4cfiesq:
-    resolution: {integrity: sha512-+JxUlkvfj3hoxaVFLJx/p8SZ6OR/AW2fiMyn0PuLB/U50k6xr2YaR1G5KB0WqmpcKMFkom3jR/LsWTaVoy8+0g==}
+  /@mantine/styles/5.5.0_7xbt6cqxny5okm7nuwm4cfiesq:
+    resolution: {integrity: sha512-0B6TeC0gRtergMD5X+9YizjOllv3kKRU6zxyvsp5dYIw339WH4+G89Qaz1Y6HQEzj85Gw3OoUx87czNLzM+L+w==}
     peerDependencies:
       '@emotion/react': '>=11.9.0'
       react: '>=16.8.0'
@@ -804,8 +804,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@mantine/utils/5.4.2_react@18.2.0:
-    resolution: {integrity: sha512-faKJd2VEsq9hw9jR7dYBlgS8gtwWtqYtgzAJ96V5tz+gjuoDkE7St+CbP+PoPGqOWTDE0T5faRiCHbnvaYAC/A==}
+  /@mantine/utils/5.5.0_react@18.2.0:
+    resolution: {integrity: sha512-Ej+hYfu49faFV6velJlFWLb/ErrcM3dzgYhzRPFcMpx+HZHUheTUtthFOicieGbHBd1lPXprSkMHd3UaddfY/w==}
     peerDependencies:
       react: '>=16.8.0'
     dependencies:
@@ -1001,26 +1001,26 @@ packages:
       remove-accents: 0.4.2
     dev: false
 
-  /@tanstack/query-core/4.7.2:
-    resolution: {integrity: sha512-1zQuFsKShMhLY6rQYBEmkYiK9Zcb3lQcCVOTIgQcvliKIxPyZFaE/8LMtaITEEfgGF5qwYqHdm61+BUtpyNsrg==}
+  /@tanstack/query-core/4.9.0:
+    resolution: {integrity: sha512-Vl0jAWJR3A1md0PoPMoEd6+H1dlRB5NqXDBNF+MZEgjQsR0Nly2kJgJj0Zh6eRDndnn7VlspxTWoOpt+dwDdAA==}
     dev: false
 
-  /@tanstack/react-query-devtools/4.7.2_5y6winp2ndk3p734flb325i4v4:
-    resolution: {integrity: sha512-Dia8EaesGvZeWVFsDnSd98cbNi16+s74glAjrjFigtvUNQKziBqYKMzBpFwFMNfMJbaZlx4b4V5DeJh7hkKfvA==}
+  /@tanstack/react-query-devtools/4.9.0_deywjuordwfceo4ntvg532uqbq:
+    resolution: {integrity: sha512-VO8d23Hrjp4tub20OIGszsmYwSyal/7PhYP1Miv7GAVrdPQN38lqP9afhkhkXDW025x7oAXYUUl4LzUCxVwKBw==}
     peerDependencies:
-      '@tanstack/react-query': 4.7.2
+      '@tanstack/react-query': 4.9.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@tanstack/match-sorter-utils': 8.1.1
-      '@tanstack/react-query': 4.7.2_biqbaboplfbrettd7655fr4n2y
+      '@tanstack/react-query': 4.9.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
-  /@tanstack/react-query/4.7.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-4nJ0HxU2kxkaHZ/swJw39io3Bb3liiggJBsCCdFOydZOl8AJDRCor1E3GsOBrtn53HT01R9EIP4PY/6fyYdKsw==}
+  /@tanstack/react-query/4.9.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-M4utYjk9BRDUYbbprSsa0eExdC9NjqQ0deuHXYxQkT8l8BIVyw6yv02LQUGBdOnn/6w5xXFyQRG2slo+JhqeBg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -1031,7 +1031,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 4.7.2
+      '@tanstack/query-core': 4.9.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
