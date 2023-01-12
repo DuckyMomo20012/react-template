@@ -5,7 +5,6 @@ import {
 import { AppShell } from '@/components/layouts/AppShell.jsx';
 import { NotFound } from '@/pages/404.jsx';
 import { ErrorBoundary } from '@/pages/error.jsx';
-
 import { HomePage } from '@/pages/index.jsx';
 
 const router = createBrowserRouter([
