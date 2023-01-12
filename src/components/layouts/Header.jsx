@@ -6,7 +6,6 @@ import {
   Group,
   Image,
   Header as MantineHeader,
-  Space,
   Text,
   Tooltip,
   useMantineColorScheme,
@@ -46,10 +45,11 @@ const Header = ({ setNavBarOpened }) => {
                 width={32}
               />
             </Box>
-            <Text align="center">React Template</Text>
+            <Text align="center" fw={700}>
+              React Template
+            </Text>
           </Anchor>
-          <Space w="xl" />
-          <Anchor component={Link} to="/" underline={false}>
+          <Anchor component={Link} fw={500} to="/" underline={false}>
             Home
           </Anchor>
         </Group>

@@ -51,9 +51,9 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
 
   return (
     <Transition
-      duration={100}
+      duration={200}
       mounted={navBarOpened}
-      timingFunction="ease"
+      timingFunction="ease-in-out"
       transition={{
         in: { opacity: 1, transform: 'translateX(0)' },
         out: { opacity: 0, transform: 'translateX(-100%)' },
@@ -88,7 +88,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
                       width={32}
                     />
                   </Box>
-                  <Text align="center" className="w-full truncate">
+                  <Text align="center" className="w-full truncate" fw={700}>
                     React Template
                   </Text>
                 </Anchor>
@@ -122,6 +122,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
                       return (
                         <MantineNavLink
                           active={isActive}
+                          fw={500}
                           icon={<Icon height={24} icon={path.icon} />}
                           label={path.label}
                           onClick={() => setNavBarOpened(false)}
