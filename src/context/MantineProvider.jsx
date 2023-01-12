@@ -5,7 +5,7 @@ import {
   DEFAULT_THEME as mantineDefaultTheme,
 } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import windiColors from 'windicss/colors';
+import windiDefaultColors from 'windicss/colors';
 import windiDefaultTheme from 'windicss/defaultTheme';
 
 const convertBreakpoint = (breakpoint) => {
@@ -17,9 +17,10 @@ const convertBreakpoint = (breakpoint) => {
   return convertedBreakpoint;
 };
 
-const convertColor = (colors) => {
+// Override Mantine colors
+const convertColor = (windiColors) => {
   const convertedColor = {};
-  Object.keys(colors).forEach((color) => {
+  Object.keys(windiColors).forEach((color) => {
     if (color === 'lightBlue') {
       color = 'sky';
     } else if (color === 'warmGray') {
@@ -34,10 +35,13 @@ const convertColor = (colors) => {
       color = 'zinc';
     }
 
-    if (colors[color] instanceof Object) {
-      convertedColor[color] = Object.values(colors[color]);
+    if (windiColors[color] instanceof Object) {
+      convertedColor[color] = Object.values(windiColors[color]);
     }
   });
+  // NOTE: WindiCSS dark color is too dark
+  convertedColor.dark = convertedColor.zinc;
+
   return convertedColor;
 };
 
@@ -55,10 +59,10 @@ const theme = {
     ...mantineDefaultTheme.breakpoints,
     ...convertBreakpoint(windiDefaultTheme.screens), // WindiCSS
   },
-  colors: convertColor(windiColors),
+  colors: convertColor(windiDefaultColors),
   defaultRadius: 'md',
-  black: windiColors.black,
-  white: windiColors.white,
+  black: windiDefaultColors.black,
+  white: windiDefaultColors.white,
   primaryColor: 'blue',
   fontSizes: {
     ...mantineDefaultTheme.fontSizes,
@@ -72,7 +76,7 @@ const theme = {
   fontFamily: `Inter,${mantineDefaultTheme.fontFamily}`,
   fontFamilyMonospace: `"Space Mono",${mantineDefaultTheme.fontFamilyMonospace}`,
   headings: {
-    fontFamily: `Barlow,${mantineDefaultTheme.headings.fontFamily}`,
+    fontFamily: `Quicksand,${mantineDefaultTheme.headings.fontFamily}`,
   },
   lineHeight: mantineDefaultTheme.lineHeight,
   loader: 'oval',
@@ -90,6 +94,20 @@ const MyGlobalStyles = () => {
           img: {
             filter: 'brightness(.8) contrast(1.2)',
           },
+        },
+        '::-webkit-scrollbar': {
+          width: '7px',
+        },
+        '::-webkit-scrollbar-track': {
+          background: '#f1f1f1',
+          borderRadius: '10px',
+        },
+        '::-webkit-scrollbar-thumb': {
+          background: '#888',
+          borderRadius: '10px',
+        },
+        '::-webkit-scrollbar-thumb:hover': {
+          background: '#555',
         },
       }}
     />

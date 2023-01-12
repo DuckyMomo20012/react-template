@@ -22,7 +22,11 @@ const Footer = () => {
             inline={true}
           />{' '}
           by <Anchor href="https://github.com/DuckyMomo20012">Tien Vinh</Anchor>
-          . MIT License
+          .{' '}
+          <Anchor href="https://github.com/DuckyMomo20012/react-template/blob/main/LICENSE">
+            MIT
+          </Anchor>{' '}
+          License
         </Text>
       </Stack>
     </MantineFooter>
