@@ -72,7 +72,7 @@ const theme = {
   fontFamily: `Inter,${mantineDefaultTheme.fontFamily}`,
   fontFamilyMonospace: `"Space Mono",${mantineDefaultTheme.fontFamilyMonospace}`,
   headings: {
-    fontFamily: `Barlow,${mantineDefaultTheme.headings.fontFamily}`,
+    fontFamily: `Quicksand,${mantineDefaultTheme.headings.fontFamily}`,
   },
   lineHeight: mantineDefaultTheme.lineHeight,
   loader: 'oval',

@@ -212,9 +212,9 @@ const HomePage = () => {
           </Text>
           <Group position="center">
             <Text>Text: Inter</Text>
-            <Title order={4}>Heading: Barlow</Title>
+            <Title order={4}>Heading: Quicksand</Title>
             <Code color="violet">Mono: Space Mono</Code>
-            <Text className="!font-serif">Serif: Roboto Slab</Text>
+            <Text className="!font-serif">Serif: Merriweather</Text>
           </Group>
         </Stack>
         <Stack align="center">
