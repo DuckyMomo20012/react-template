@@ -14,7 +14,7 @@ const NotFound = () => {
   return (
     <Center align="center" className="h-screen">
       <Stack className="w-1/2">
-        <Image alt="404" src="/404.svg" />
+        <Image alt="404" src="/img/404.svg" />
         <Title order={1}>You have found a secret place.</Title>
         <Text color="dimmed" size="lg">
           Unfortunately, this is only a 404 page. You may have mistyped the

@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/react.svg" alt="logo" width="200" height="auto" />
+  <img src="public/img/react.svg" alt="logo" width="200" height="auto" />
   <h1>React Template</h1>
 
   <p>
