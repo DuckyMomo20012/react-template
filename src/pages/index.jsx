@@ -23,56 +23,56 @@ const techStack = [
     color: 'violet',
     docLink: 'https://redux-toolkit.js.org/',
     description: 'State management',
-    logoSrc: '/redux.svg',
+    logoSrc: '/img/redux.svg',
   },
   {
     name: 'React Router',
     color: 'red',
     docLink: 'https://reactrouter.com/en/main',
     description: 'Routing',
-    logoSrc: '/react-router.svg',
+    logoSrc: '/img/react-router.svg',
   },
   {
     name: 'React Hook Form',
     color: 'pink',
     docLink: 'https://react-hook-form.com/',
     description: 'Forms',
-    logoSrc: '/react-hook-form.svg',
+    logoSrc: '/img/react-hook-form.svg',
   },
   {
     name: 'TanStack Query',
     color: 'orange',
     docLink: 'https://tanstack.com/query/v4',
     description: 'Data fetching',
-    logoSrc: '/react-query.svg',
+    logoSrc: '/img/react-query.svg',
   },
   {
     name: 'Mantine',
     color: 'blue',
     docLink: 'https://mantine.dev/',
     description: 'UI library',
-    logoSrc: '/mantine.svg',
+    logoSrc: '/img/mantine.svg',
   },
   {
     name: 'WindiCSS',
     color: 'sky',
     docLink: 'https://windicss.org/',
     description: 'CSS framework',
-    logoSrc: '/windicss.svg',
+    logoSrc: '/img/windicss.svg',
   },
   {
     name: 'Vitest',
     color: 'emerald',
     docLink: 'https://vitest.dev/',
     description: 'Unit testing',
-    logoSrc: '/vitest.svg',
+    logoSrc: '/img/vitest.svg',
   },
   {
     name: 'Playwright',
     color: 'green',
     docLink: 'https://playwright.dev/',
     description: 'E2E testing',
-    logoSrc: '/playwright.svg',
+    logoSrc: '/img/playwright.svg',
   },
 ];
 
@@ -88,14 +88,14 @@ const HomePage = () => {
           className="hover:filter"
           fit="contain"
           height={80}
-          src="/vite.svg"
+          src="/img/vite.svg"
           style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)' }}
         />
         <Image
           className="animate-duration-10000 animate-spin hover:filter"
           fit="contain"
           height={80}
-          src="/react.svg"
+          src="/img/react.svg"
           style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)' }}
         />
       </Group>
@@ -256,7 +256,7 @@ const HomePage = () => {
               with plugins
             </Title>
             <Group
-              className="children:(animate-infinite animate-duration-3000)"
+              className="children:(animated animate-loop animate-duration-3000)"
               position="center"
             >
               <Badge className="animate-tada" color="yellow">

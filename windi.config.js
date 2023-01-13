@@ -1,5 +1,4 @@
 import { DEFAULT_THEME as mantineDefaultTheme } from '@mantine/core';
-import pluginAnimations from '@windicss/plugin-animations';
 import windiDefaultColors from 'windicss/colors';
 
 // Don't override WindiCSS colors
@@ -29,14 +28,7 @@ export default {
     exclude: ['node_modules', '.git', '.next/**/*'],
     include: ['**/*.{jsx,css}'],
   },
-  plugins: [
-    // Other plugins
-    pluginAnimations({
-      settings: {
-        // animatedSpeed: 1000,
-      },
-    }),
-  ],
+  plugins: [],
   shortcuts: {
     // ...
   },
