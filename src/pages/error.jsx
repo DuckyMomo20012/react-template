@@ -1,44 +1,36 @@
-import { Button, Group, Stack, Text, Title } from '@mantine/core';
 import {
-  isRouteErrorResponse,
-  useNavigate,
-  useRouteError,
-} from 'react-router-dom';
+  Button,
+  Center,
+  Group,
+  Image,
+  Stack,
+  Text,
+  Title,
+} from '@mantine/core';
 
 function ErrorBoundary() {
-  const navigate = useNavigate();
-  const error = useRouteError();
-
-  let errorStatus = 500;
-
-  if (isRouteErrorResponse(error)) {
-    errorStatus = error.status;
-  }
-
   return (
-    <Stack align="center" className="w-full h-full" justify="center">
-      <Stack align="center" className="w-1/2">
-        <Text className="text-240px" color="gray">
-          {errorStatus}
-        </Text>
-        <Title align="center">Something bad just happened...</Title>
-        <Text align="center" color="dimmed" size="lg">
+    <Center align="center" className="h-screen">
+      <Stack className="w-1/2">
+        <Image alt="500" src="/500.svg" />
+        <Title order={1}>Something bad just happened...</Title>
+        <Text color="dimmed" size="lg">
           Our servers could not handle your request. Don&apos;t worry, our
           development team was already notified. Try refreshing the page.
         </Text>
         <Group position="center">
           <Button
             onClick={() => {
-              navigate(0);
+              window.location.reload();
             }}
             size="md"
-            variant="subtle"
+            variant="light"
           >
             Refresh the page
           </Button>
         </Group>
       </Stack>
-    </Stack>
+    </Center>
   );
 }
 
