@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "types": [],
-    "jsx": "react-jsx",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "outDir": "./dist/out-tsc",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-      "@/constants/*": ["constants/*"],
-      "@/context/*": ["context/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/store/*": ["store/*"],
-      "@/utils/*": ["utils/*"],
-      "@/routes/*": ["routes/*"],
-      "@/pages/*": ["pages/*"],
-      "@/components/*": ["components/*"],
-      "@/elements/*": ["components/elements/*"],
-      "@/layouts/*": ["components/layouts/*"],
-      "@/modules/*": ["components/modules/*"],
-      "@/libs/*": ["libs/*"]
-    }
+      "@/*": ["src/*"]
+    },
+    "noErrorTruncation": true
   },
-  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+  "include": ["src", "tests"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
