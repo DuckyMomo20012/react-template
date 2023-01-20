@@ -89,14 +89,22 @@ const HomePage = () => {
           fit="contain"
           height={80}
           src="/img/vite.svg"
-          style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)' }}
+          style={
+            {
+              '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)',
+            } as React.CSSProperties
+          }
         />
         <Image
           className="animate-duration-10000 animate-spin hover:filter"
           fit="contain"
           height={80}
           src="/img/react.svg"
-          style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)' }}
+          style={
+            {
+              '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)',
+            } as React.CSSProperties
+          }
         />
       </Group>
       <Title align="center" className="text-4xl">
