@@ -14,7 +14,11 @@ import { Link } from 'react-router-dom';
 
 import logo from '@/logo.svg';
 
-const Header = ({ setNavBarOpened }) => {
+type HeaderProps = {
+  setNavBarOpened: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Header = ({ setNavBarOpened }: HeaderProps) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
@@ -33,7 +37,6 @@ const Header = ({ setNavBarOpened }) => {
           <Anchor
             className="flex items-center gap-2"
             component={Link}
-            spacing="xs"
             to="/"
             underline={false}
           >

@@ -30,7 +30,18 @@ const paths = [
   },
 ];
 
-const Navbar = ({ navBarOpened, setNavBarOpened }) => {
+type NavbarProps = {
+  navBarOpened: boolean;
+  setNavBarOpened: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const slideRight = {
+  in: { opacity: 1, transform: 'translateX(0)' },
+  out: { opacity: 0, transform: 'translateX(-100%)' },
+  transitionProperty: 'transform, opacity',
+};
+
+const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
   const matches = useMediaQuery('(min-width: 640px)');
@@ -54,10 +65,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
       duration={200}
       mounted={navBarOpened}
       timingFunction="ease-in-out"
-      transition={{
-        in: { opacity: 1, transform: 'translateX(0)' },
-        out: { opacity: 0, transform: 'translateX(-100%)' },
-      }}
+      transition={slideRight}
     >
       {(styles) => {
         return (
@@ -76,7 +84,6 @@ const Navbar = ({ navBarOpened, setNavBarOpened }) => {
                 <Anchor
                   className="flex min-w-0 items-center gap-2"
                   component={Link}
-                  spacing="xs"
                   to="/"
                   underline={false}
                 >
