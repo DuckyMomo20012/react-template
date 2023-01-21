@@ -83,33 +83,58 @@ const HomePage = () => {
 
   return (
     <Stack align="center" py="xl">
-      <Group grow position="center" spacing="xl">
-        <Image
-          className="hover:filter"
-          fit="contain"
-          height={80}
-          src="/img/vite.svg"
-          style={
-            {
-              '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)',
-            } as React.CSSProperties
-          }
-        />
-        <Image
-          className="animate-duration-10000 animate-spin hover:filter"
-          fit="contain"
-          height={80}
-          src="/img/react.svg"
-          style={
-            {
-              '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)',
-            } as React.CSSProperties
-          }
-        />
+      <Group className="w-full" position="center" spacing="xl">
+        <Stack align="center">
+          <Image
+            className="hover:filter"
+            fit="contain"
+            height={80}
+            src="/img/vite.svg"
+            style={
+              {
+                '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)',
+              } as React.CSSProperties
+            }
+          />
+          <Title align="center" className="text-4xl">
+            Vite
+          </Title>
+        </Stack>
+        <Icon height={36} icon="fluent-emoji-flat:plus" width={36} />
+        <Stack align="center">
+          <Image
+            className="animate-duration-10000 animate-spin hover:filter"
+            fit="contain"
+            height={80}
+            src="/img/react.svg"
+            style={
+              {
+                '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)',
+              } as React.CSSProperties
+            }
+          />
+          <Title align="center" className="text-4xl">
+            React
+          </Title>
+        </Stack>
+        <Icon height={36} icon="fluent-emoji-flat:plus" width={36} />
+        <Stack align="center">
+          <Image
+            className="hover:filter"
+            fit="contain"
+            height={80}
+            src="/img/typescript.svg"
+            style={
+              {
+                '--tw-drop-shadow': 'drop-shadow(0 0 2em #3178c6aa)',
+              } as React.CSSProperties
+            }
+          />
+          <Title align="center" className="text-4xl">
+            Typescript
+          </Title>
+        </Stack>
       </Group>
-      <Title align="center" className="text-4xl">
-        Vite + React
-      </Title>
 
       <Title
         align="center"
@@ -292,10 +317,13 @@ const HomePage = () => {
               <Icon icon="fluent-emoji-flat:locked" inline /> Type-safe all the
               way with TypeScript
             </Title>
-            <Text align="center" color="yellow" transform="uppercase">
-              <Icon icon="fluent-emoji-flat:construction" inline /> Coming Soon{' '}
-              <Icon icon="fluent-emoji-flat:construction" inline />
-            </Text>
+            <Badge
+              className="before:(animated animate-pulse animate-loop animate-duration-1000)"
+              color="green"
+              variant="dot"
+            >
+              Enabled
+            </Badge>
           </Stack>
         </Box>
       </SimpleGrid>

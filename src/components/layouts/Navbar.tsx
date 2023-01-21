@@ -73,7 +73,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
             // hiddenBreakpoint="sm"
             // NOTE: Don't set this because we want animation to work
             // Hidden={!navBarOpened}
-            className="!sm:hidden !w-9/10 !z-200 !top-0 shadow-md"
+            className="!sm:hidden !w-9/10 !z-200 !top-0 shadow-md rounded-r-lg"
             style={styles}
           >
             <MantineNavbar.Section
@@ -115,7 +115,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                   </ActionIcon>
                 </Tooltip>
               </Group>
-              <CloseButton onClick={() => setNavBarOpened(false)} />
+              <CloseButton onClick={() => setNavBarOpened(false)} size="xl" />
             </MantineNavbar.Section>
             <MantineNavbar.Section component={ScrollArea} grow>
               {paths.map((path) => {
