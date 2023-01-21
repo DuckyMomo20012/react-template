@@ -2,10 +2,10 @@ import {
   RouterProvider as BaseRouterProvider,
   createBrowserRouter,
 } from 'react-router-dom';
-import { AppShell } from '@/components/layouts/AppShell.jsx';
-import { NotFound } from '@/pages/404.jsx';
-import { ErrorBoundary } from '@/pages/error.jsx';
-import { HomePage } from '@/pages/index.jsx';
+import { AppShell } from '@/components/layouts/AppShell';
+import { NotFound } from '@/pages/404';
+import { ErrorBoundary } from '@/pages/error';
+import { HomePage } from '@/pages/index';
 
 const router = createBrowserRouter([
   {
