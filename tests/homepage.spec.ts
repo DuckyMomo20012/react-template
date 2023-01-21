@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test('homepage has dark mode demo section and dark mode button', async ({
   page,
