@@ -3,8 +3,7 @@ import { expect, test } from '@playwright/test';
 test('homepage has dark mode demo section and dark mode button', async ({
   page,
 }) => {
-  // Go to https://my-react-template.netlify.app/
-  await page.goto('https://my-react-template.netlify.app/');
+  await page.goto('http://localhost:9999/');
 
   const body = page.locator('body');
 
@@ -15,7 +14,7 @@ test('homepage has dark mode demo section and dark mode button', async ({
   expect(await body.getAttribute('class')).toContain('dark');
 
   // Click dark mode button
-  await page.locator('button').first().click();
+  await page.locator('[data-test-id=color-scheme-toggle]').click();
 
   // Assert body doesn't have class "dark"
   expect(await body.getAttribute('class')).not.toContain('dark');
@@ -36,8 +35,7 @@ test('homepage has dark mode demo section and dark mode button', async ({
 test('homepage has github button and link to react-template repository', async ({
   page,
 }) => {
-  // Go to https://my-react-template.netlify.app/
-  await page.goto('https://my-react-template.netlify.app/');
+  await page.goto('http://localhost:9999/');
 
   const [popup] = await Promise.all([
     // It is important to call waitForEvent before click to set up waiting.

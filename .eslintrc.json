@@ -27,6 +27,16 @@
   "plugins": ["react", "import", "prettier"],
   "rules": {
     "eqeqeq": "warn",
+    "import/extensions": [
+      "warn",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "import/no-extraneous-dependencies": [
       "warn",
       {
