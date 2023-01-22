@@ -13,12 +13,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
-      - name: Install dependencies
-        run: yarn
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: yarn playwright test
+        run: npx playwright test
       - uses: actions/upload-artifact@v3
         if: always()
         with:
