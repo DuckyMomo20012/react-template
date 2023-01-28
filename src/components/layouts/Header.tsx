@@ -2,7 +2,6 @@ import { Icon } from '@iconify/react';
 import {
   ActionIcon,
   Anchor,
-  Box,
   Group,
   Image,
   Header as MantineHeader,
@@ -10,58 +9,154 @@ import {
   Tooltip,
   useMantineColorScheme,
 } from '@mantine/core';
+import { useElementSize } from '@mantine/hooks';
+import { useEffect, useLayoutEffect, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  NavMenuList,
+  NavMenuListCompact,
+} from '@/components/elements/NavMenuList';
+import { navBarItems as defaultNavBarItems } from '@/components/layouts/navBarItems';
 
 import logo from '@/logo.svg';
+import { NavPath } from '@/types/NavPath';
 
 type HeaderProps = {
   setNavBarOpened: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+type NavItemState = {
+  items: NavPath[];
+  hiddenItems: NavPath[];
+  oversizeWidth: number[];
+};
+
+type NavItemAction =
+  | {
+      type: 'hide';
+      payload?: number;
+    }
+  | {
+      type: 'restore';
+    };
+
+function reducer(state: NavItemState, action: NavItemAction) {
+  switch (action.type) {
+    case 'hide': {
+      return {
+        ...state,
+        items: [...state.items.slice(0, -1)],
+        hiddenItems: [...state.items.slice(-1), ...state.hiddenItems],
+        oversizeWidth: [action.payload, ...state.oversizeWidth],
+      };
+    }
+
+    case 'restore': {
+      return {
+        ...state,
+        items: [...state.items, ...state.hiddenItems.slice(0, 1)],
+        hiddenItems: [...state.hiddenItems.slice(1)],
+        oversizeWidth: [...state.oversizeWidth.slice(1)],
+      };
+    }
+
+    default:
+      return state;
+  }
+}
+
 const Header = ({ setNavBarOpened }: HeaderProps) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
+  const [itemState, dispatch] = useReducer(reducer, {
+    items: defaultNavBarItems,
+    hiddenItems: [],
+    oversizeWidth: [],
+  });
+
+  const { ref: containerRef, width: containerWidth } = useElementSize();
+  const { ref: childrenRef, width: childrenWidth } = useElementSize();
+
+  const [hidden, setHidden] = useState(true);
+
+  const hiddenStyles = {
+    height: 0,
+    overflow: 'hidden',
+  };
+
+  useLayoutEffect(() => {
+    if (childrenWidth > containerWidth) {
+      dispatch({
+        type: 'hide',
+        payload: childrenWidth,
+      });
+    }
+  }, [containerWidth, childrenWidth]);
+
+  useEffect(() => {
+    if (itemState.oversizeWidth.at(0) < containerWidth) {
+      dispatch({
+        type: 'restore',
+      });
+    }
+
+    if (childrenWidth < containerWidth) {
+      setHidden(false);
+    }
+  }, [itemState, childrenWidth, containerWidth]);
+
   return (
     <MantineHeader height={48} px={24}>
       <Group className="h-full" noWrap position="apart">
-        <ActionIcon size="lg" variant="subtle">
-          <Icon
-            className="block sm:hidden"
-            height={24}
-            icon="ic:baseline-menu"
-            onClick={() => {
-              setNavBarOpened((prevNavBarOpened) => !prevNavBarOpened);
-            }}
-          />
+        <ActionIcon
+          className="sm:hidden"
+          onClick={() => {
+            setNavBarOpened((prevNavBarOpened) => !prevNavBarOpened);
+          }}
+          size="lg"
+          variant="subtle"
+        >
+          <Icon height={24} icon="ic:baseline-menu" />
         </ActionIcon>
-        <Group className="!sm:flex !hidden !flex-grow" position="left">
+
+        <Group className="sm:flex hidden">
           <Anchor
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 whitespace-nowrap"
             component={Link}
             to="/"
             underline={false}
           >
-            <Box component="span">
-              <Image
-                className="animate-duration-5000 animate-spin"
-                height={32}
-                src={logo}
-                width={32}
-              />
-            </Box>
+            <Image height={32} src={logo} width={32} />
             <Text align="center" fw={700}>
               React Template
             </Text>
           </Anchor>
-          <Anchor component={Link} fw={500} to="/" underline={false}>
-            Home
-          </Anchor>
         </Group>
-        <Group>
+
+        <Group className="sm:flex hidden flex-grow h-full">
+          <Group
+            className="h-full relative flex-grow overflow-hidden"
+            ref={containerRef}
+          >
+            <Group
+              className="h-full absolute"
+              noWrap
+              ref={childrenRef}
+              style={{ ...(hidden && hiddenStyles) }}
+            >
+              <NavMenuList level={3} paths={itemState.items} />
+              {itemState.hiddenItems.length > 0 && (
+                <NavMenuListCompact level={3} paths={itemState.hiddenItems} />
+              )}
+            </Group>
+          </Group>
+        </Group>
+
+        <Group noWrap>
           <Tooltip label={dark ? 'Light mode' : 'Dark mode'}>
             <ActionIcon
-              className="!sm:flex !hidden"
+              className="sm:flex hidden"
               color="blue"
               data-test-id="color-scheme-toggle"
               onClick={() => toggleColorScheme()}
