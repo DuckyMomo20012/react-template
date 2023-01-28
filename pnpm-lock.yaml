@@ -19,6 +19,7 @@ specifiers:
   '@vitejs/plugin-react': 3.0.1
   '@vitest/ui': 0.27.2
   axios: 1.2.3
+  clsx: 1.2.1
   eslint: 8.32.0
   eslint-config-airbnb-base: 15.0.0
   eslint-config-prettier: 8.6.0
@@ -43,6 +44,7 @@ specifiers:
   vite-plugin-windicss: 1.8.10
   vitest: 0.27.2
   windicss: 3.5.6
+  zod: 3.20.2
 
 dependencies:
   '@emotion/react': 11.10.5_yxdp3dl3eazy3vwpbmv4fq727a
@@ -53,12 +55,14 @@ dependencies:
   '@tanstack/react-query': 4.22.0_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-query-devtools': 4.22.0_gp275tdwez2a4eujt75dnnp754
   axios: 1.2.3
+  clsx: 1.2.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.42.1_react@18.2.0
   react-redux: 8.0.5_sfvtgtw6zg4uu5uf4vg7hgzorm
   react-router-dom: 6.7.0_biqbaboplfbrettd7655fr4n2y
   type-fest: 3.5.3
+  zod: 3.20.2
 
 devDependencies:
   '@babel/core': 7.20.12
@@ -1808,6 +1812,11 @@ packages:
 
   /clsx/1.1.1:
     resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
     dev: false
 
@@ -5038,3 +5047,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod/3.20.2:
+    resolution: {integrity: sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==}
+    dev: false
