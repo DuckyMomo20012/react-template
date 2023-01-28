@@ -127,12 +127,7 @@ const Header = ({ setNavBarOpened }: HeaderProps) => {
             to="/"
             underline={false}
           >
-            <Image
-              className="animate-duration-5000 animate-spin"
-              height={32}
-              src={logo}
-              width={32}
-            />
+            <Image height={32} src={logo} width={32} />
             <Text align="center" fw={700}>
               React Template
             </Text>

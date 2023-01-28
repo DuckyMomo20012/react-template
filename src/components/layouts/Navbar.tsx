@@ -78,12 +78,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                   to="/"
                   underline={false}
                 >
-                  <Image
-                    className="animate-duration-5000 animate-spin"
-                    height={32}
-                    src={logo}
-                    width={32}
-                  />
+                  <Image height={32} src={logo} width={32} />
                   <Text align="center" className="w-full truncate" fw={700}>
                     React Template
                   </Text>

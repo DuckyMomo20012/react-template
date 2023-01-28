@@ -103,7 +103,7 @@ const HomePage = () => {
         <Icon height={36} icon="fluent-emoji-flat:plus" width={36} />
         <Stack align="center">
           <Image
-            className="animate-duration-10000 animate-spin hover:filter"
+            className="hover:filter"
             fit="contain"
             height={80}
             src="/img/react.svg"
@@ -317,11 +317,7 @@ const HomePage = () => {
               <Icon icon="fluent-emoji-flat:locked" inline /> Type-safe all the
               way with TypeScript
             </Title>
-            <Badge
-              className="before:(animated animate-pulse animate-loop animate-duration-1000)"
-              color="green"
-              variant="dot"
-            >
+            <Badge color="green" variant="dot">
               Enabled
             </Badge>
           </Stack>
