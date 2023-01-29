@@ -95,6 +95,7 @@ const HomePage = () => {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)',
               } as React.CSSProperties
             }
+            width={80}
           />
           <Title align="center" className="text-4xl">
             Vite
@@ -112,6 +113,7 @@ const HomePage = () => {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)',
               } as React.CSSProperties
             }
+            width={80}
           />
           <Title align="center" className="text-4xl">
             React
@@ -129,6 +131,7 @@ const HomePage = () => {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #3178c6aa)',
               } as React.CSSProperties
             }
+            width={80}
           />
           <Title align="center" className="text-4xl">
             Typescript

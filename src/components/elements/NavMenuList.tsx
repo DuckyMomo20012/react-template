@@ -26,7 +26,11 @@ const NavMenuListDropdown = ({
           color: path.color,
           component: Link,
           icon: path.icon && (
-            <Icon height={DEFAULT_ICON_HEIGHT} icon={path.icon} />
+            <Icon
+              height={DEFAULT_ICON_HEIGHT}
+              icon={path.icon}
+              width={DEFAULT_ICON_HEIGHT}
+            />
           ),
           label: path.label,
           style: { height: DEFAULT_ITEM_HEIGHT },
@@ -100,7 +104,11 @@ const NavMenuList = ({
                 component={Link}
                 leftIcon={
                   path.icon && (
-                    <Icon height={DEFAULT_ICON_HEIGHT} icon={path.icon} />
+                    <Icon
+                      height={DEFAULT_ICON_HEIGHT}
+                      icon={path.icon}
+                      width={DEFAULT_ICON_HEIGHT}
+                    />
                   )
                 }
                 rightIcon={
@@ -108,6 +116,7 @@ const NavMenuList = ({
                     <Icon
                       height={DEFAULT_ICON_HEIGHT}
                       icon="ic:outline-expand-more"
+                      width={DEFAULT_ICON_HEIGHT}
                     />
                   )
                 }
@@ -148,7 +157,11 @@ const NavMenuListCompact = ({
     <Menu position="bottom-start" trigger="hover" withinPortal>
       <Menu.Target>
         <ActionIcon size={36} variant="light">
-          <Icon height={DEFAULT_ICON_HEIGHT} icon="ic:baseline-more-vert" />
+          <Icon
+            height={DEFAULT_ICON_HEIGHT}
+            icon="ic:baseline-more-vert"
+            width={DEFAULT_ICON_HEIGHT}
+          />
         </ActionIcon>
       </Menu.Target>
 

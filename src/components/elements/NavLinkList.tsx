@@ -48,7 +48,7 @@ const NavLinkList = ({
             icon={
               path.icon && (
                 <ThemeIcon color={path.color} size="lg" variant="light">
-                  <Icon height={24} icon={path.icon} />
+                  <Icon height={24} icon={path.icon} width={24} />
                 </ThemeIcon>
               )
             }
@@ -58,7 +58,11 @@ const NavLinkList = ({
             rightSection={
               continueLevel ? (
                 <ActionIcon color={path.color} size={32} variant="filled">
-                  <Icon height={24} icon="ic:outline-chevron-right" />
+                  <Icon
+                    height={24}
+                    icon="ic:outline-chevron-right"
+                    width={24}
+                  />
                 </ActionIcon>
               ) : undefined
             }

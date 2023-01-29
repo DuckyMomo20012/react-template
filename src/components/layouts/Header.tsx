@@ -117,7 +117,7 @@ const Header = ({ setNavBarOpened }: HeaderProps) => {
           size="lg"
           variant="subtle"
         >
-          <Icon height={24} icon="ic:baseline-menu" />
+          <Icon height={24} icon="ic:baseline-menu" width={24} />
         </ActionIcon>
 
         <Group className="sm:flex hidden">
