@@ -15,7 +15,7 @@ import {
   useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { FeatureBox } from '@/components/elements/FeatureBox';
 
 const techStack = [

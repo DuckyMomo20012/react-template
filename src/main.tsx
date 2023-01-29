@@ -6,6 +6,7 @@ import 'virtual:windi.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
+  HelmetProvider,
   MantineProvider,
   QueryProvider,
   ReduxProvider,
@@ -17,7 +18,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <ReduxProvider>
       <QueryProvider>
         <MantineProvider>
-          <RouterProvider />
+          <HelmetProvider>
+            <RouterProvider />
+          </HelmetProvider>
         </MantineProvider>
       </QueryProvider>
     </ReduxProvider>
