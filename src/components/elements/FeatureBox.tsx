@@ -18,17 +18,25 @@ const FeatureBox = ({
     <Box
       className={clsx(
         'relative before:(absolute inset-0 content-DEFAULT border-dashed rounded-lg border-3)',
-        { [`before:border-${color}-300`]: true },
         outerClassName,
       )}
+      sx={(theme) => {
+        return {
+          '::before': {
+            borderColor: theme.colors[color][3],
+          },
+        };
+      }}
       {...props}
     >
       <Box
         className={clsx(
           'border-3 rounded-lg transform hover:(-translate-x-3 -translate-y-3) duration-150 bg-white dark:bg-dark-50 h-full p-5',
-          { [`border-${color}-400`]: true },
           innerClassName,
         )}
+        sx={(theme) => ({
+          borderColor: theme.colors[color][4],
+        })}
       >
         {children}
       </Box>
