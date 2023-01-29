@@ -127,7 +127,7 @@ const Header = ({ setNavBarOpened }: HeaderProps) => {
             to="/"
             underline={false}
           >
-            <Image height={32} src={logo} width={32} />
+            <Image alt="logo" height={32} src={logo} width={32} />
             <Text align="center" fw={700}>
               React Template
             </Text>
