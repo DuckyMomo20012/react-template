@@ -78,7 +78,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                   to="/"
                   underline={false}
                 >
-                  <Image height={32} src={logo} width={32} />
+                  <Image alt="logo" height={32} src={logo} width={32} />
                   <Text align="center" className="w-full truncate" fw={700}>
                     React Template
                   </Text>
