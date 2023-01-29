@@ -15,6 +15,7 @@ import {
   useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
+import { Helmet } from 'react-helmet';
 import { FeatureBox } from '@/components/elements/FeatureBox';
 
 const techStack = [
@@ -83,6 +84,13 @@ const HomePage = () => {
 
   return (
     <Stack align="center" py="xl">
+      <Helmet>
+        <title>Vite + React + TS</title>
+        <meta
+          content="A simple starter template for Vite + React + Typescript projects, with many useful features and tools pre-installed."
+          name="description"
+        ></meta>
+      </Helmet>
       <Group className="w-full" position="center" spacing="xl">
         <Stack align="center">
           <Image
