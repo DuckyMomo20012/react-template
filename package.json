@@ -12,7 +12,6 @@
     "test:e2e": "npx playwright test",
     "test:unit": "vitest",
     "coverage": "vitest run --coverage",
-    "pretty": "yarn prettier --write .",
     "lint": "npx eslint --ext .jsx,.js,.tsx,.ts src/",
     "prepare": "husky install"
   },
