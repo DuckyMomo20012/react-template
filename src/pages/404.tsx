@@ -45,4 +45,4 @@ const NotFound = () => {
   );
 };
 
-export { NotFound };
+export default NotFound;

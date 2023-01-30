@@ -52,4 +52,4 @@ function ErrorBoundary() {
   );
 }
 
-export { ErrorBoundary };
+export default ErrorBoundary;

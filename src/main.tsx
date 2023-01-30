@@ -2,6 +2,7 @@
 import 'virtual:windi-devtools';
 // eslint-disable-next-line import/no-unresolved
 import 'virtual:windi.css';
+import 'nprogress/nprogress.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

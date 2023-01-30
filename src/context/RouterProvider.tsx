@@ -1,11 +1,14 @@
+import { Suspense, lazy } from 'react';
 import {
   RouterProvider as BaseRouterProvider,
   createBrowserRouter,
 } from 'react-router-dom';
+import { ProgressBar } from '@/components/elements/ProgressBar';
 import { AppShell } from '@/components/layouts/AppShell';
-import { NotFound } from '@/pages/404';
-import { ErrorBoundary } from '@/pages/error';
-import { HomePage } from '@/pages/index';
+
+const HomePage = lazy(() => import('@/pages/index'));
+const NotFound = lazy(() => import('@/pages/404'));
+const ErrorBoundary = lazy(() => import('@/pages/error'));
 
 const router = createBrowserRouter([
   {
@@ -13,13 +16,19 @@ const router = createBrowserRouter([
     element: <AppShell />,
     children: [
       {
-        element: <HomePage />,
+        element: (
+          <Suspense fallback={<ProgressBar />}>
+            <HomePage />
+          </Suspense>
+        ),
         index: true,
       },
     ],
     errorElement: (
       <AppShell>
-        <ErrorBoundary />
+        <Suspense fallback={<ProgressBar />}>
+          <ErrorBoundary />
+        </Suspense>
       </AppShell>
     ),
   },
@@ -27,7 +36,9 @@ const router = createBrowserRouter([
     path: '*',
     element: (
       <AppShell>
-        <NotFound />
+        <Suspense fallback={<ProgressBar />}>
+          <NotFound />
+        </Suspense>
       </AppShell>
     ),
   },
