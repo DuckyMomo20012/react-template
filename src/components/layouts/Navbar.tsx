@@ -2,13 +2,11 @@ import { Icon } from '@iconify/react';
 import {
   ActionIcon,
   Anchor,
-  Box,
   Button,
   CloseButton,
   Divider,
   Group,
   Image,
-  NavLink as MantineNavLink,
   Navbar as MantineNavbar,
   ScrollArea,
   Text,
@@ -18,17 +16,10 @@ import {
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import { NavLinkList } from '@/components/elements/NavLinkList';
+import { navBarItems } from '@/components/layouts/navBarItems';
 import logo from '@/logo.svg';
-
-const paths = [
-  {
-    path: '/',
-    label: 'Home',
-    icon: 'ic:outline-home',
-  },
-];
 
 type NavbarProps = {
   navBarOpened: boolean;
@@ -62,7 +53,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
 
   return (
     <Transition
-      duration={200}
+      duration={0}
       mounted={navBarOpened}
       timingFunction="ease-in-out"
       transition={slideRight}
@@ -87,20 +78,14 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                   to="/"
                   underline={false}
                 >
-                  <Box component="span">
-                    <Image
-                      className="animate-duration-5000 animate-spin"
-                      height={32}
-                      src={logo}
-                      width={32}
-                    />
-                  </Box>
+                  <Image alt="logo" height={32} src={logo} width={32} />
                   <Text align="center" className="w-full truncate" fw={700}>
                     React Template
                   </Text>
                 </Anchor>
                 <Tooltip label={dark ? 'Light mode' : 'Dark mode'}>
                   <ActionIcon
+                    aria-label="Toggle color scheme"
                     color="blue"
                     onClick={() => toggleColorScheme()}
                     size="lg"
@@ -115,30 +100,19 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                   </ActionIcon>
                 </Tooltip>
               </Group>
-              <CloseButton onClick={() => setNavBarOpened(false)} size="xl" />
+              <CloseButton
+                aria-label="Close navigation menu"
+                onClick={() => setNavBarOpened(false)}
+                size="xl"
+              />
             </MantineNavbar.Section>
             <MantineNavbar.Section component={ScrollArea} grow>
-              {paths.map((path) => {
-                return (
-                  <NavLink
-                    className="no-underline"
-                    key={path.path}
-                    to={path.path}
-                  >
-                    {({ isActive }) => {
-                      return (
-                        <MantineNavLink
-                          active={isActive}
-                          fw={500}
-                          icon={<Icon height={24} icon={path.icon} />}
-                          label={path.label}
-                          onClick={() => setNavBarOpened(false)}
-                        />
-                      );
-                    }}
-                  </NavLink>
-                );
-              })}
+              <NavLinkList
+                count={0}
+                handleClick={() => setNavBarOpened(false)}
+                level={2}
+                paths={navBarItems}
+              />
             </MantineNavbar.Section>
             <Divider />
             <MantineNavbar.Section p="sm">

@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+export type CounterState = {
+  value: number;
+};
+
 const initialState = {
   value: 0,
 };

@@ -2,7 +2,6 @@ import { Icon } from '@iconify/react';
 import {
   ActionIcon,
   Badge,
-  Box,
   Button,
   Code,
   ColorSwatch,
@@ -16,6 +15,9 @@ import {
   useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
+import { Helmet } from 'react-helmet-async';
+import { Counter } from '@/components/elements/Counter';
+import { FeatureBox } from '@/components/elements/FeatureBox';
 
 const techStack = [
   {
@@ -83,18 +85,33 @@ const HomePage = () => {
 
   return (
     <Stack align="center" py="xl">
+      <Helmet>
+        <title>Vite + React + TS</title>
+        <meta
+          content="A simple starter template for Vite + React + Typescript projects, with many useful features and tools pre-installed."
+          name="description"
+        ></meta>
+      </Helmet>
       <Group className="w-full" position="center" spacing="xl">
         <Stack align="center">
           <Image
+            alt="vite logo"
             className="hover:filter"
             fit="contain"
             height={80}
+            imageProps={{
+              style: {
+                aspectRatio: '1 / 1',
+              },
+            }}
             src="/img/vite.svg"
             style={
               {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)',
               } as React.CSSProperties
             }
+            width={80}
+            withPlaceholder
           />
           <Title align="center" className="text-4xl">
             Vite
@@ -103,15 +120,23 @@ const HomePage = () => {
         <Icon height={36} icon="fluent-emoji-flat:plus" width={36} />
         <Stack align="center">
           <Image
-            className="animate-duration-10000 animate-spin hover:filter"
+            alt="react logo"
+            className="hover:filter"
             fit="contain"
             height={80}
+            imageProps={{
+              style: {
+                aspectRatio: '1 / 1',
+              },
+            }}
             src="/img/react.svg"
             style={
               {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #61dafbaa)',
               } as React.CSSProperties
             }
+            width={80}
+            withPlaceholder
           />
           <Title align="center" className="text-4xl">
             React
@@ -120,15 +145,23 @@ const HomePage = () => {
         <Icon height={36} icon="fluent-emoji-flat:plus" width={36} />
         <Stack align="center">
           <Image
+            alt="typescript logo"
             className="hover:filter"
             fit="contain"
             height={80}
+            imageProps={{
+              style: {
+                aspectRatio: '1 / 1',
+              },
+            }}
             src="/img/typescript.svg"
             style={
               {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #3178c6aa)',
               } as React.CSSProperties
             }
+            width={80}
+            withPlaceholder
           />
           <Title align="center" className="text-4xl">
             Typescript
@@ -149,15 +182,30 @@ const HomePage = () => {
         Features
       </Title>
 
-      <SimpleGrid className="w-2/3 lg:auto-cols-min xl:auto-rows-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-3 children:(backdrop-filter backdrop-blur-md)">
-        <Box className="col-span-1 md:col-span-2 lg:col-span-3 relative before:(absolute inset-0 content-DEFAULT border-dashed rounded-lg border-3 border-indigo-300)">
-          <Stack
-            align="center"
-            className="border-3 rounded-lg transform hover:(-translate-x-3 -translate-y-3) duration-150 bg-white dark:bg-dark-50 border-indigo-400 h-full p-5"
-          >
+      <SimpleGrid
+        breakpoints={[
+          { minWidth: 'md', cols: 2 },
+          { minWidth: 'lg', cols: 3 },
+        ]}
+        className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
+        cols={1}
+      >
+        <FeatureBox
+          color="indigo"
+          outerClassName="col-span-1 md:col-span-2 lg:col-span-3"
+        >
+          <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:high-voltage" inline /> Batteries
-              included
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:high-voltage"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Batteries included
             </Title>
             <Group className="w-full" position="center" spacing="xl">
               {techStack.map(
@@ -174,8 +222,14 @@ const HomePage = () => {
                           variant="outline"
                         >
                           <Image
+                            alt={`${name.toLowerCase()} logo`}
                             fit="contain"
                             height={36}
+                            imageProps={{
+                              style: {
+                                aspectRatio: '1 / 1',
+                              },
+                            }}
                             src={logoSrc}
                             width={36}
                             withPlaceholder
@@ -189,16 +243,21 @@ const HomePage = () => {
               )}
             </Group>
           </Stack>
-        </Box>
+        </FeatureBox>
 
-        <Box className="relative before:(absolute inset-0 content-DEFAULT border-dashed rounded-lg border-3 border-rose-300)">
-          <Stack
-            align="center"
-            className="border-3 rounded-lg transform hover:(-translate-x-3 -translate-y-3) duration-150 bg-white dark:bg-dark-50 border-rose-400 h-full p-5"
-          >
+        <FeatureBox color="rose">
+          <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:sponge" inline /> Better code style
-              with
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:sponge"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Better code style with
             </Title>
             <Group position="center">
               <Badge color="purple">ESlint</Badge>
@@ -209,16 +268,52 @@ const HomePage = () => {
               <Badge color="zinc">Editorconfig</Badge>
             </Group>
           </Stack>
-        </Box>
+        </FeatureBox>
 
-        <Box className="relative before:(absolute inset-0 content-DEFAULT border-dashed rounded-lg border-3 border-teal-300)">
-          <Stack
-            align="center"
-            className="border-3 rounded-lg transform hover:(-translate-x-3 -translate-y-3) duration-150 bg-white dark:bg-dark-50 border-teal-400 h-full p-5"
-          >
+        <FeatureBox color="pink">
+          <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:artist-palette" inline /> Extended
-              WindiCSS color palette
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:dizzy"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Move faster with these awesome libraries
+            </Title>
+            <Group position="center">
+              <Badge className="animate-tada" color="yellow">
+                Axios
+              </Badge>
+              <Badge className="animate-wobble" color="lime">
+                Clsx
+              </Badge>
+              <Badge className="animate-swing" color="rose">
+                Type-fest
+              </Badge>
+              <Badge className="animate-jello" color="cyan">
+                Zod
+              </Badge>
+            </Group>
+          </Stack>
+        </FeatureBox>
+
+        <FeatureBox color="teal">
+          <Stack align="center">
+            <Title align="center" order={3}>
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:artist-palette"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Extended WindiCSS color palette
             </Title>
             <Group position="center">
               {Object.keys(theme.colors).map((color) => {
@@ -235,19 +330,21 @@ const HomePage = () => {
               })}
             </Group>
           </Stack>
-        </Box>
+        </FeatureBox>
 
-        <Box className="relative before:(absolute inset-0 content-DEFAULT border-dashed rounded-lg border-3 border-amber-300)">
-          <Stack
-            align="center"
-            className="border-3 rounded-lg transform hover:(-translate-x-3 -translate-y-3) duration-150 bg-white dark:bg-dark-50 border-amber-400 h-full p-5"
-          >
+        <FeatureBox color="amber">
+          <Stack align="center">
             <Title align="center" order={3}>
               <Icon
+                height={22}
                 icon={`fluent-emoji-flat:${
                   dark ? 'full-moon-face' : 'sun-with-face'
                 }`}
                 inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
               />{' '}
               Dark mode ready
             </Title>
@@ -259,76 +356,50 @@ const HomePage = () => {
               Toggle dark mode
             </Button>
           </Stack>
-        </Box>
+        </FeatureBox>
 
-        <Box className="relative before:(absolute inset-0 content-DEFAULT border-dashed rounded-lg border-3 border-sky-300)">
-          <Stack
-            align="center"
-            className="border-3 rounded-lg transform hover:(-translate-x-3 -translate-y-3) duration-150 bg-white dark:bg-dark-50 border-sky-400 h-full p-5"
-          >
+        <FeatureBox color="sky">
+          <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:input-latin-lowercase" inline />{' '}
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:input-latin-lowercase"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
               Pre-configured font pairing
             </Title>
             <Group position="center">
               <Text>Text: Inter</Text>
               <Title order={4}>Heading: Quicksand</Title>
               <Code color="violet">Mono: Space Mono</Code>
-              <Text className="!font-serif">Serif: Merriweather</Text>
             </Group>
           </Stack>
-        </Box>
+        </FeatureBox>
 
-        <Box className="relative before:(absolute inset-0 content-DEFAULT border-dashed rounded-lg border-3 border-pink-300)">
-          <Stack
-            align="center"
-            className="border-3 rounded-lg transform hover:(-translate-x-3 -translate-y-3) duration-150 bg-white dark:bg-dark-50 border-pink-400 h-full p-5"
-          >
+        <FeatureBox color="gray">
+          <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:dizzy" inline /> Animation is easy
-              with plugins
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:puzzle-piece"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Simple Redux integration
             </Title>
-            <Group
-              className="children:(animated animate-loop animate-duration-3000)"
-              position="center"
-            >
-              <Badge className="animate-tada" color="yellow">
-                Tada
-              </Badge>
-              <Badge className="animate-wobble" color="lime">
-                Wobble
-              </Badge>
-              <Badge className="animate-swing" color="rose">
-                Swing
-              </Badge>
-              <Badge className="animate-jello" color="cyan">
-                Jello
-              </Badge>
-            </Group>
+            <Counter />
           </Stack>
-        </Box>
-
-        <Box className="relative before:(absolute inset-0 content-DEFAULT border-dashed rounded-lg border-3 border-gray-300)">
-          <Stack
-            align="center"
-            className="border-3 rounded-lg transform hover:(-translate-x-3 -translate-y-3) duration-150 bg-white dark:bg-dark-50 border-gray-400 h-full p-5"
-          >
-            <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:locked" inline /> Type-safe all the
-              way with TypeScript
-            </Title>
-            <Badge
-              className="before:(animated animate-pulse animate-loop animate-duration-1000)"
-              color="green"
-              variant="dot"
-            >
-              Enabled
-            </Badge>
-          </Stack>
-        </Box>
+        </FeatureBox>
       </SimpleGrid>
     </Stack>
   );
 };
 
-export { HomePage };
+export default HomePage;
