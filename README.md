@@ -75,10 +75,7 @@
 ### :camera: Screenshots
 
 <div align="center">
-  <p>Light mode</p>
-  <img src="https://user-images.githubusercontent.com/64480713/215486886-ae1098c1-89d3-42d3-9db6-8dc1fd3b8cca.png" alt="screenshot" />
-  <p>Dark mode</p>
-  <img src="https://user-images.githubusercontent.com/64480713/215486719-3e76a855-c828-4f3b-8e31-21f9d2740321.png" alt="screenshot_dark_mode" />
+  <img src="https://github.com/DuckyMomo20012/react-template/assets/64480713/7efdd81d-6a6b-41aa-8226-4fa3ea96f27e" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
