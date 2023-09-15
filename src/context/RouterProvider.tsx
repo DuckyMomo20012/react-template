@@ -3,7 +3,7 @@ import {
   RouterProvider as BaseRouterProvider,
   createBrowserRouter,
 } from 'react-router-dom';
-import { ProgressBar } from '@/components/elements/ProgressBar';
+import { ProgressBar } from '@/components/ui/ProgressBar';
 
 const HomePage = lazy(() => import('@/pages/index'));
 const NotFound = lazy(() => import('@/pages/404'));
