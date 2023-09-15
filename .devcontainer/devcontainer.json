@@ -36,13 +36,11 @@
         "stkb.rewrap",
         "zengxingxin.sort-js-object-keys",
         "albert.TabOut",
+        "bradlc.vscode-tailwindcss",
         "wayou.vscode-todo-highlight",
-        "pflannery.vscode-versionlens",
-        "vscode-icons-team.vscode-icons",
         "Orta.vscode-twoslash-queries",
-        "voorjaar.windicss-intellisense",
-        "ms-playwright.playwright",
-        "zixuanchen.vitest-explorer"
+        "pflannery.vscode-versionlens",
+        "vscode-icons-team.vscode-icons"
       ]
     }
   }
