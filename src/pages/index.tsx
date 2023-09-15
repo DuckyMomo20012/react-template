@@ -157,11 +157,11 @@ const HomePage = () => {
           spacing="xl"
           verticalSpacing="xl"
         >
-          <Box className="border-4 rounded-lg border-indigo-300 col-span-1 md:col-span-2 lg:col-span-3 p-5">
+          <Box className="col-span-1 rounded-lg border-4 border-indigo-300 p-5 md:col-span-2 lg:col-span-3">
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
-                  className="aspect-square inline"
+                  className="inline aspect-square"
                   height={22}
                   icon="fluent-emoji-flat:high-voltage"
                   inline
@@ -207,11 +207,11 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="border-4 rounded-lg border-rose-300 p-5">
+          <Box className="rounded-lg border-4 border-rose-300 p-5">
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
-                  className="aspect-square inline"
+                  className="inline aspect-square"
                   height={22}
                   icon="fluent-emoji-flat:sponge"
                   inline
@@ -230,11 +230,11 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="border-4 rounded-lg border-pink-300 p-5">
+          <Box className="rounded-lg border-4 border-pink-300 p-5">
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
-                  className="aspect-square inline"
+                  className="inline aspect-square"
                   height={22}
                   icon="fluent-emoji-flat:dizzy"
                   inline
@@ -251,11 +251,11 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="border-4 rounded-lg border-amber-300 p-5">
+          <Box className="rounded-lg border-4 border-amber-300 p-5">
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
-                  className="aspect-square inline"
+                  className="inline aspect-square"
                   height={22}
                   icon={`fluent-emoji-flat:${
                     dark ? 'full-moon-face' : 'sun-with-face'
