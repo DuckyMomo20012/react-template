@@ -211,20 +211,18 @@ const HomePage = () => {
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
+                  className="aspect-square inline"
                   height={22}
                   icon="fluent-emoji-flat:sponge"
                   inline
-                  style={{
-                    aspectRatio: '1 / 1',
-                  }}
                   width={22}
                 />{' '}
                 Better code style with
               </Title>
               <Group position="center">
-                <Badge color="purple">ESlint</Badge>
-                <Badge color="fuchsia">Prettier</Badge>
-                <Badge color="slate">Husky</Badge>
+                <Badge color="orange">ESlint</Badge>
+                <Badge color="red">Prettier</Badge>
+                <Badge color="gray">Husky</Badge>
                 <Badge color="indigo">Commitlint</Badge>
                 <Badge color="teal">Lint-staged</Badge>
                 <Badge color="zinc">Editorconfig</Badge>
@@ -236,12 +234,10 @@ const HomePage = () => {
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
+                  className="aspect-square inline"
                   height={22}
                   icon="fluent-emoji-flat:dizzy"
                   inline
-                  style={{
-                    aspectRatio: '1 / 1',
-                  }}
                   width={22}
                 />{' '}
                 Move faster with these awesome libraries
@@ -259,14 +255,12 @@ const HomePage = () => {
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
+                  className="aspect-square inline"
                   height={22}
                   icon={`fluent-emoji-flat:${
                     dark ? 'full-moon-face' : 'sun-with-face'
                   }`}
                   inline
-                  style={{
-                    aspectRatio: '1 / 1',
-                  }}
                   width={22}
                 />{' '}
                 Dark mode ready
