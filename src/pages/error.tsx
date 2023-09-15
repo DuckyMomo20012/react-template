@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet-async';
 
 function ErrorBoundary() {
   return (
-    <Center className="h-full">
+    <Center className="h-screen">
       <Helmet>
         <title>Server Error</title>
         <meta
