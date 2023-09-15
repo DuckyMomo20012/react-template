@@ -1,7 +1,5 @@
-// eslint-disable-next-line import/no-unresolved
-import 'virtual:windi-devtools';
-// eslint-disable-next-line import/no-unresolved
-import 'virtual:windi.css';
+import '@/styles/globals.css';
+
 import 'nprogress/nprogress.css';
 
 import React from 'react';

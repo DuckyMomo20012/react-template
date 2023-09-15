@@ -5,5 +5,5 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts", "windi.config.ts", "playwright.config.ts"]
+  "include": ["vite.config.ts", "tailwind.config.ts", "playwright.config.ts"]
 }
