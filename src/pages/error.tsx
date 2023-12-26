@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet-async';
 
 function ErrorBoundary() {
   return (
-    <Center className="h-screen">
+    <Center className="@container h-full w-full flex-1">
       <Helmet>
         <title>Server Error</title>
         <meta
@@ -19,24 +19,16 @@ function ErrorBoundary() {
           name="description"
         ></meta>
       </Helmet>
-      <Stack className="w-3/4 md:w-1/2 lg:w-1/3">
-        <Image
-          alt="500"
-          imageProps={{
-            style: {
-              aspectRatio: '5 / 4',
-            },
-          }}
-          src="https://http.cat/500"
-        />
-        <Title align="center" order={1}>
+      <Stack align="center" className="min-w-4/5 @lg:w-full w-4/5 max-w-xl">
+        <Image alt="500" className="aspect-[5/4]" src="https://http.cat/500" />
+        <Title className="text-center" order={1}>
           Something bad just happened...
         </Title>
-        <Text align="center" color="dimmed" size="lg">
+        <Text c="dimmed" className="text-center" size="lg">
           Our servers could not handle your request. Don&apos;t worry, our
           development team was already notified. Try refreshing the page.
         </Text>
-        <Group position="center">
+        <Group justify="center">
           <Button
             onClick={() => {
               window.location.reload();
