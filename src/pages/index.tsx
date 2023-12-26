@@ -86,80 +86,46 @@ const HomePage = () => {
           name="description"
         ></meta>
       </Helmet>
-      <Stack align="center" className="h-screen justify-center" spacing="xl">
-        <Group className="w-full" position="center" spacing="xl">
+      <Stack align="center" className="h-screen justify-center" gap="xl">
+        <Group className="w-full" gap="xl" justify="center">
           <Stack align="center">
             <Image
               alt="vite logo"
-              className="hover:filter"
+              className="aspect-square h-20 w-20 hover:filter"
               fit="contain"
-              height={80}
-              imageProps={{
-                style: {
-                  aspectRatio: '1 / 1',
-                },
-              }}
               src="/img/vite.svg"
-              width={80}
-              withPlaceholder
             />
-            <Title align="center" className="text-4xl">
-              Vite
-            </Title>
+            <Title className="text-center text-4xl">Vite</Title>
           </Stack>
           <Stack align="center">
             <Image
               alt="react logo"
-              className="hover:filter"
+              className="aspect-square h-20 w-20 hover:filter"
               fit="contain"
-              height={80}
-              imageProps={{
-                style: {
-                  aspectRatio: '1 / 1',
-                },
-              }}
               src="/img/react.svg"
-              width={80}
-              withPlaceholder
             />
-            <Title align="center" className="text-4xl">
-              React
-            </Title>
+            <Title className="text-center text-4xl">React</Title>
           </Stack>
           <Stack align="center">
             <Image
               alt="typescript logo"
-              className="hover:filter"
+              className="aspect-square h-20 w-20 hover:filter"
               fit="contain"
-              height={80}
-              imageProps={{
-                style: {
-                  aspectRatio: '1 / 1',
-                },
-              }}
               src="/img/typescript.svg"
-              width={80}
-              withPlaceholder
             />
-            <Title align="center" className="text-4xl">
-              Typescript
-            </Title>
+            <Title className="text-center text-4xl">Typescript</Title>
           </Stack>
         </Group>
 
         <SimpleGrid
-          breakpoints={[
-            { minWidth: 'md', cols: 2 },
-            { minWidth: 'lg', cols: 3 },
-          ]}
           className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
-          cols={1}
+          cols={{ base: 1, md: 2, lg: 3 }}
           spacing="xl"
           verticalSpacing="xl"
         >
           <Box className="col-span-1 rounded-lg border-4 border-indigo-300 p-5 md:col-span-2 lg:col-span-3">
             <Stack align="center">
-              <Title align="center" order={3}>
+              <Title className="text-center" order={3}>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -169,7 +135,7 @@ const HomePage = () => {
                 />{' '}
                 Batteries included
               </Title>
-              <Group className="w-full" position="center" spacing="xl">
+              <Group className="w-full" gap="xl" justify="center">
                 {techStack.map(
                   ({ name, color, docLink, description, logoSrc }) => {
                     return (
@@ -185,16 +151,11 @@ const HomePage = () => {
                           >
                             <Image
                               alt={`${name.toLowerCase()} logo`}
+                              className="aspect-square"
                               fit="contain"
                               height={36}
-                              imageProps={{
-                                style: {
-                                  aspectRatio: '1 / 1',
-                                },
-                              }}
                               src={logoSrc}
                               width={36}
-                              withPlaceholder
                             />
                           </ActionIcon>
                         </Tooltip.Floating>
@@ -209,7 +170,7 @@ const HomePage = () => {
 
           <Box className="rounded-lg border-4 border-rose-300 p-5">
             <Stack align="center">
-              <Title align="center" order={3}>
+              <Title className="text-center" order={3}>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -219,7 +180,7 @@ const HomePage = () => {
                 />{' '}
                 Better code style with
               </Title>
-              <Group position="center">
+              <Group justify="center">
                 <Badge color="orange">ESlint</Badge>
                 <Badge color="red">Prettier</Badge>
                 <Badge color="gray">Husky</Badge>
@@ -232,7 +193,7 @@ const HomePage = () => {
 
           <Box className="rounded-lg border-4 border-pink-300 p-5">
             <Stack align="center">
-              <Title align="center" order={3}>
+              <Title className="text-center" order={3}>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -242,7 +203,7 @@ const HomePage = () => {
                 />{' '}
                 Move faster with these awesome libraries
               </Title>
-              <Group position="center">
+              <Group justify="center">
                 <Badge color="yellow">Axios</Badge>
                 <Badge color="lime">Clsx</Badge>
                 <Badge color="rose">Type-fest</Badge>
@@ -253,7 +214,7 @@ const HomePage = () => {
 
           <Box className="rounded-lg border-4 border-amber-300 p-5">
             <Stack align="center">
-              <Title align="center" order={3}>
+              <Title className="text-center" order={3}>
                 <Icon
                   className="inline aspect-square"
                   height={22}
