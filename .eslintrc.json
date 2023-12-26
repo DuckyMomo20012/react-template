@@ -26,7 +26,6 @@
   },
   "plugins": ["react", "import", "prettier"],
   "rules": {
-    "eqeqeq": "warn",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": [
       "warn",
