@@ -13,6 +13,7 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const techStack = [
   {
@@ -39,7 +40,7 @@ const techStack = [
   {
     name: 'TanStack Query',
     color: 'orange',
-    docLink: 'https://tanstack.com/query/v4',
+    docLink: 'https://tanstack.com/query/latest',
     description: 'Data fetching',
     logoSrc: '/img/react-query.svg',
   },
@@ -117,13 +118,23 @@ const HomePage = () => {
           </Stack>
         </Group>
 
+        <Button
+          color="dark"
+          component={Link}
+          leftSection={<Icon height={20} icon="mdi:github" width={20} />}
+          target="_blank"
+          to="https://github.com/DuckyMomo20012/react-template/"
+        >
+          GitHub
+        </Button>
+
         <SimpleGrid
           className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
           cols={{ base: 1, md: 2, lg: 3 }}
           spacing="xl"
           verticalSpacing="xl"
         >
-          <Box className="col-span-1 rounded-lg border-4 border-indigo-300 p-5 md:col-span-2 lg:col-span-3">
+          <Box className="col-span-1 rounded-lg border-4 border-solid border-indigo-300 p-5 md:col-span-2 lg:col-span-3">
             <Stack align="center">
               <Title className="text-center" order={3}>
                 <Icon
@@ -168,7 +179,7 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="rounded-lg border-4 border-rose-300 p-5">
+          <Box className="rounded-lg border-4 border-solid border-rose-300 p-5">
             <Stack align="center">
               <Title className="text-center" order={3}>
                 <Icon
@@ -191,7 +202,7 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="rounded-lg border-4 border-pink-300 p-5">
+          <Box className="rounded-lg border-4 border-solid border-pink-300 p-5">
             <Stack align="center">
               <Title className="text-center" order={3}>
                 <Icon
@@ -212,7 +223,7 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="rounded-lg border-4 border-amber-300 p-5">
+          <Box className="rounded-lg border-4 border-solid border-amber-300 p-5">
             <Stack align="center">
               <Title className="text-center" order={3}>
                 <Icon

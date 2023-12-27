@@ -89,7 +89,7 @@
     <li><a href="https://reactjs.org/">React.js</a></li>
     <li><a href="https://reactrouter.com/">React Router</a></li>
     <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
-    <li><a href="https://tanstack.com/query/v4">TanStack Query</a></li>
+    <li><a href="https://tanstack.com/query/latest">TanStack Query</a></li>
     <li><a href="https://react-hook-form.com/">React Hook Form</a></li>
     <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
     <li><a href="https://mantine.dev/">Mantine</a></li>

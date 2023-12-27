@@ -1,37 +1,22 @@
-import { Suspense, lazy } from 'react';
 import {
   RouterProvider as BaseRouterProvider,
+  Route,
   createBrowserRouter,
+  createRoutesFromElements,
 } from 'react-router-dom';
-import { ProgressBar } from '@/components/ui/ProgressBar';
 
-const HomePage = lazy(() => import('@/pages/index'));
-const NotFound = lazy(() => import('@/pages/404'));
-const ErrorBoundary = lazy(() => import('@/pages/error'));
+import NotFound from '@/pages/404';
+import ErrorBoundary from '@/pages/error';
+import HomePage from '@/pages/index';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: (
-      <Suspense fallback={<ProgressBar />}>
-        <HomePage />
-      </Suspense>
-    ),
-    errorElement: (
-      <Suspense fallback={<ProgressBar />}>
-        <ErrorBoundary />
-      </Suspense>
-    ),
-  },
-  {
-    path: '*',
-    element: (
-      <Suspense fallback={<ProgressBar />}>
-        <NotFound />
-      </Suspense>
-    ),
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route errorElement={<ErrorBoundary />}>
+      <Route element={<HomePage />} path="/" />
+      <Route element={<NotFound />} path="*" />
+    </Route>,
+  ),
+);
 
 const RouterProvider = () => {
   return <BaseRouterProvider router={router} />;

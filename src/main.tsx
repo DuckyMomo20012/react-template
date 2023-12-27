@@ -1,9 +1,8 @@
-import '@/styles/globals.css';
-
-import 'nprogress/nprogress.css';
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import '@/styles/globals.css';
+
 import {
   HelmetProvider,
   MantineProvider,
