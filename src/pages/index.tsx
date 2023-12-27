@@ -85,8 +85,9 @@ const HomePage = () => {
         <meta
           content="A simple starter template for Vite + React + Typescript projects, with many useful features and tools pre-installed."
           name="description"
-        ></meta>
+        />
       </Helmet>
+
       <Stack align="center" className="h-screen justify-center" gap="xl">
         <Group className="w-full" gap="xl" justify="center">
           <Stack align="center">
