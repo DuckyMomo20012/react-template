@@ -6,12 +6,12 @@ import {
 } from 'react-router-dom';
 
 import NotFound from '@/pages/404';
-import ErrorBoundary from '@/pages/error';
+import Error from '@/pages/error';
 import HomePage from '@/pages/index';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route errorElement={<ErrorBoundary />}>
+    <Route errorElement={<Error />}>
       <Route element={<HomePage />} path="/" />
       <Route element={<NotFound />} path="*" />
     </Route>,

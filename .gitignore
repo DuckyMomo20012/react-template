@@ -8,9 +8,17 @@ build/
 public/build/
 generated/
 
-
 # dependencies
 node_modules
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # IDEs and editors
 /.idea
@@ -28,6 +36,9 @@ node_modules
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# testing
+/coverage
+
 # misc
 /.sass-cache
 /connect.lock
@@ -37,9 +48,6 @@ node_modules
 # System Files
 .DS_Store
 Thumbs.db
-/test-results/
-/playwright-report/
-/playwright/.cache/
 
 # Env Files
 .env
@@ -53,3 +61,8 @@ yarn-debug.log*
 yarn-error.log*
 /libpeerconnection.log
 testem.log
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
