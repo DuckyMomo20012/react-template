@@ -1,82 +1,70 @@
 import { Icon } from '@iconify/react';
 import {
-  ActionIcon,
-  Badge,
-  Box,
-  Button,
+  ColorSwatch,
   Group,
-  Image,
+  type MantineSize,
   SimpleGrid,
+  Slider,
   Stack,
-  Title,
-  Tooltip,
-  useMantineColorScheme,
+  Switch,
+  Text,
+  TextInput,
+  useMantineTheme,
 } from '@mantine/core';
+import { useDeferredValue, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { ButtonDemo } from '@/components/modules/ButtonDemo';
+import { ComboboxDemo } from '@/components/modules/ComboboxDemo';
+import { DataDisplayDemo } from '@/components/modules/DataDisplayDemo';
+import { FeedbackDemo } from '@/components/modules/FeedbackDemo';
+import { InputDemo } from '@/components/modules/InputDemo';
+import { NavigationDemo } from '@/components/modules/NavigationDemo';
+import { OverlayDemo } from '@/components/modules/OverlayDemo';
+import { TypographyDemo } from '@/components/modules/TypographyDemo';
 
-const techStack = [
-  {
-    name: 'Redux Toolkit',
-    color: 'violet',
-    docLink: 'https://redux-toolkit.js.org/',
-    description: 'State management',
-    logoSrc: '/img/redux.svg',
-  },
-  {
-    name: 'React Router',
-    color: 'red',
-    docLink: 'https://reactrouter.com/en/main',
-    description: 'Routing',
-    logoSrc: '/img/react-router.svg',
-  },
-  {
-    name: 'React Hook Form',
-    color: 'pink',
-    docLink: 'https://react-hook-form.com/',
-    description: 'Forms',
-    logoSrc: '/img/react-hook-form.svg',
-  },
-  {
-    name: 'TanStack Query',
-    color: 'orange',
-    docLink: 'https://tanstack.com/query/latest',
-    description: 'Data fetching',
-    logoSrc: '/img/react-query.svg',
-  },
-  {
-    name: 'Mantine',
-    color: 'blue',
-    docLink: 'https://mantine.dev/',
-    description: 'UI library',
-    logoSrc: '/img/mantine.svg',
-  },
-  {
-    name: 'TaildwindCSS',
-    color: 'cyan',
-    docLink: 'https://tailwindcss.com/',
-    description: 'CSS framework',
-    logoSrc: '/img/tailwindcss.svg',
-  },
-  {
-    name: 'Vitest',
-    color: 'emerald',
-    docLink: 'https://vitest.dev/',
-    description: 'Unit testing',
-    logoSrc: '/img/vitest.svg',
-  },
-  {
-    name: 'Playwright',
-    color: 'green',
-    docLink: 'https://playwright.dev/',
-    description: 'E2E testing',
-    logoSrc: '/img/playwright.svg',
-  },
-];
+export type ControlledDemoProps = {
+  color: string;
+  size: MantineSize;
+  radius: MantineSize;
+  label: string;
+  description: string;
+  error: string;
+  placeholder: string;
+  withAsterisk: boolean;
+  disabled: boolean;
+  loading: boolean;
+};
 
 const HomePage = () => {
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const dark = colorScheme === 'dark';
+  const themes = useMantineTheme();
+  const [color, setColor] = useState(themes.primaryColor);
+  const [size, setSize] = useState<MantineSize>('sm');
+  const [radius, setRadius] = useState<MantineSize>('md');
+  const [label, setLabel] = useState('Label');
+  const [description, setDescription] = useState('');
+  const [error, setError] = useState('');
+  const [placeholder, setPlaceholder] = useState('');
+  const [withAsterisk, setWithAsterisk] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const deferredLabel = useDeferredValue(label);
+  const deferredDescription = useDeferredValue(description);
+  const deferredError = useDeferredValue(error);
+  const deferredPlaceholder = useDeferredValue(placeholder);
+
+  const defaultProps: ControlledDemoProps = {
+    color,
+    description: deferredDescription,
+    disabled,
+    error: deferredError,
+    label: deferredLabel,
+    placeholder: deferredPlaceholder,
+    radius,
+    size,
+    withAsterisk,
+    loading,
+  };
 
   return (
     <>
@@ -88,165 +76,164 @@ const HomePage = () => {
         />
       </Helmet>
 
-      <Stack align="center" className="h-screen justify-center" gap="xl">
-        <Group className="w-full" gap="xl" justify="center">
-          <Stack align="center">
-            <Image
-              alt="vite logo"
-              className="aspect-square h-20 w-20 hover:filter"
-              fit="contain"
-              src="/img/vite.svg"
-            />
-            <Title className="text-center text-4xl">Vite</Title>
-          </Stack>
-          <Stack align="center">
-            <Image
-              alt="react logo"
-              className="aspect-square h-20 w-20 hover:filter"
-              fit="contain"
-              src="/img/react.svg"
-            />
-            <Title className="text-center text-4xl">React</Title>
-          </Stack>
-          <Stack align="center">
-            <Image
-              alt="typescript logo"
-              className="aspect-square h-20 w-20 hover:filter"
-              fit="contain"
-              src="/img/typescript.svg"
-            />
-            <Title className="text-center text-4xl">Typescript</Title>
-          </Stack>
-        </Group>
-
-        <Button
-          color="dark"
-          component={Link}
-          leftSection={<Icon height={20} icon="mdi:github" width={20} />}
-          target="_blank"
-          to="https://github.com/DuckyMomo20012/react-template/"
+      <Stack className="relative">
+        <Stack
+          align="center"
+          className="top-[calc(var(--app-shell-header-offset,_0px)_+_var(--app-shell-padding))] z-50 w-full bg-white py-4 shadow-sm lg:sticky"
         >
-          GitHub
-        </Button>
+          <SimpleGrid
+            className="max-w-4xl"
+            cols={{ base: 1, md: 2 }}
+            spacing="xl"
+          >
+            <Stack>
+              <TextInput
+                defaultValue={label}
+                label="Label"
+                onChange={(e) => setLabel(e.target.value)}
+              />
+              <TextInput
+                defaultValue={description}
+                label="Description"
+                onChange={(e) => setDescription(e.target.value)}
+              />
+              <TextInput
+                defaultValue={error}
+                label="Error"
+                onChange={(e) => setError(e.target.value)}
+              />
+              <TextInput
+                defaultValue={placeholder}
+                label="Placeholder"
+                onChange={(e) => setPlaceholder(e.target.value)}
+              />
+            </Stack>
+            <Stack>
+              <Group>
+                <Switch
+                  label="With asterisk"
+                  onChange={(e) => setWithAsterisk(e.currentTarget.checked)}
+                />
+                <Switch
+                  label="Disabled"
+                  onChange={(e) => setDisabled(e.currentTarget.checked)}
+                />
+                <Switch
+                  label="Loading"
+                  onChange={(e) => setLoading(e.currentTarget.checked)}
+                />
+              </Group>
+              <Stack gap="xs">
+                <Text component="label" htmlFor="size-slider">
+                  Size: {size}
+                </Text>
+                <Slider
+                  defaultValue={25}
+                  id="size-slider"
+                  label={size}
+                  marks={[
+                    { value: 0 },
+                    { value: 25 },
+                    { value: 50 },
+                    { value: 75 },
+                    { value: 100 },
+                  ]}
+                  onChange={(e) =>
+                    setSize(
+                      {
+                        0: 'xs',
+                        25: 'sm',
+                        50: 'md',
+                        75: 'lg',
+                        100: 'xl',
+                      }[e] as MantineSize,
+                    )
+                  }
+                  step={25}
+                />
+              </Stack>
+              <Stack gap="xs">
+                <Text component="label" htmlFor="radius-slider">
+                  Radius: {radius}
+                </Text>
+                <Slider
+                  defaultValue={50}
+                  id="radius-slider"
+                  label={radius}
+                  marks={[
+                    { value: 0 },
+                    { value: 25 },
+                    { value: 50 },
+                    { value: 75 },
+                    { value: 100 },
+                  ]}
+                  onChange={(e) =>
+                    setRadius(
+                      {
+                        0: 'xs',
+                        25: 'sm',
+                        50: 'md',
+                        75: 'lg',
+                        100: 'xl',
+                      }[e] as MantineSize,
+                    )
+                  }
+                  step={25}
+                />
+              </Stack>
+              <Stack gap="xs">
+                <Text>Color: {color}</Text>
+                <SimpleGrid
+                  className="max-w-max"
+                  cols={{ base: 6, xs: 8, sm: 12 }}
+                  spacing="md"
+                  verticalSpacing="xs"
+                >
+                  {Object.keys(themes.colors).map((colorKey, index) => {
+                    return (
+                      <ColorSwatch
+                        color={themes.colors[colorKey]?.at(6) as string}
+                        key={`${colorKey}-${index}`}
+                        onClick={() => setColor(colorKey)}
+                        radius="md"
+                        withShadow={false}
+                      >
+                        {color === colorKey && (
+                          <Icon
+                            className="text-white"
+                            height="100%"
+                            icon="material-symbols:check-small-rounded"
+                            width="100%"
+                          />
+                        )}
+                      </ColorSwatch>
+                    );
+                  })}
+                </SimpleGrid>
+              </Stack>
+            </Stack>
+          </SimpleGrid>
+        </Stack>
 
         <SimpleGrid
-          className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
-          cols={{ base: 1, md: 2, lg: 3 }}
-          spacing="xl"
-          verticalSpacing="xl"
+          className="p-8"
+          cols={{ base: 1, md: 2, lg: 4, xl: 6, '2xl': 6 }}
         >
-          <Box className="col-span-1 rounded-lg border-4 border-solid border-indigo-300 p-5 md:col-span-2 lg:col-span-3">
-            <Stack align="center">
-              <Title className="text-center" order={3}>
-                <Icon
-                  className="inline aspect-square"
-                  height={22}
-                  icon="fluent-emoji-flat:high-voltage"
-                  inline
-                  width={22}
-                />{' '}
-                Batteries included
-              </Title>
-              <Group className="w-full" gap="xl" justify="center">
-                {techStack.map(
-                  ({ name, color, docLink, description, logoSrc }) => {
-                    return (
-                      <Stack align="center" key={name}>
-                        <Tooltip.Floating color={color} label={description}>
-                          <ActionIcon
-                            color={color}
-                            component="a"
-                            href={docLink || '#'}
-                            size={64}
-                            target="_blank"
-                            variant="outline"
-                          >
-                            <Image
-                              alt={`${name.toLowerCase()} logo`}
-                              className="aspect-square"
-                              fit="contain"
-                              height={36}
-                              src={logoSrc}
-                              width={36}
-                            />
-                          </ActionIcon>
-                        </Tooltip.Floating>
-                        <Badge color={color}>{name}</Badge>
-                      </Stack>
-                    );
-                  },
-                )}
-              </Group>
-            </Stack>
-          </Box>
+          <InputDemo {...defaultProps} />
 
-          <Box className="rounded-lg border-4 border-solid border-rose-300 p-5">
-            <Stack align="center">
-              <Title className="text-center" order={3}>
-                <Icon
-                  className="inline aspect-square"
-                  height={22}
-                  icon="fluent-emoji-flat:sponge"
-                  inline
-                  width={22}
-                />{' '}
-                Better code style with
-              </Title>
-              <Group justify="center">
-                <Badge color="orange">ESlint</Badge>
-                <Badge color="red">Prettier</Badge>
-                <Badge color="gray">Husky</Badge>
-                <Badge color="indigo">Commitlint</Badge>
-                <Badge color="teal">Lint-staged</Badge>
-                <Badge color="zinc">Editorconfig</Badge>
-              </Group>
-            </Stack>
-          </Box>
+          <ComboboxDemo {...defaultProps} />
 
-          <Box className="rounded-lg border-4 border-solid border-pink-300 p-5">
-            <Stack align="center">
-              <Title className="text-center" order={3}>
-                <Icon
-                  className="inline aspect-square"
-                  height={22}
-                  icon="fluent-emoji-flat:dizzy"
-                  inline
-                  width={22}
-                />{' '}
-                Move faster with these awesome libraries
-              </Title>
-              <Group justify="center">
-                <Badge color="yellow">Axios</Badge>
-                <Badge color="lime">Clsx</Badge>
-                <Badge color="rose">Type-fest</Badge>
-                <Badge color="cyan">Zod</Badge>
-              </Group>
-            </Stack>
-          </Box>
+          <ButtonDemo {...defaultProps} />
 
-          <Box className="rounded-lg border-4 border-solid border-amber-300 p-5">
-            <Stack align="center">
-              <Title className="text-center" order={3}>
-                <Icon
-                  className="inline aspect-square"
-                  height={22}
-                  icon={`fluent-emoji-flat:${
-                    dark ? 'full-moon-face' : 'sun-with-face'
-                  }`}
-                  inline
-                  width={22}
-                />{' '}
-                Dark mode ready
-              </Title>
-              <Button
-                data-test-id="demo-color-scheme-toggle"
-                onClick={() => toggleColorScheme()}
-                variant="light"
-              >
-                Toggle dark mode
-              </Button>
-            </Stack>
-          </Box>
+          <NavigationDemo {...defaultProps} />
+
+          <FeedbackDemo {...defaultProps} />
+
+          <OverlayDemo {...defaultProps} />
+
+          <DataDisplayDemo {...defaultProps} />
+
+          <TypographyDemo {...defaultProps} />
         </SimpleGrid>
       </Stack>
     </>

@@ -1,16 +1,6 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    /* Base Options: */
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "target": "ESNext",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "isolatedModules": true,
-    /* Strictness */
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
     /* If NOT transpiling with TypeScript: */
     "moduleResolution": "Bundler",
     "module": "ESNext",
@@ -18,18 +8,12 @@
     /* If your code runs in the DOM: */
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     /* React */
-    "jsx": "preserve",
-    /* Path Aliases */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "jsx": "preserve"
   },
   "include": ["src", "tests"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
-  ],
-  "exclude": ["node_modules"]
+  ]
 }
