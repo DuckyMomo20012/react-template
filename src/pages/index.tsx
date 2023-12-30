@@ -53,7 +53,7 @@ const HomePage = () => {
   const deferredError = useDeferredValue(error);
   const deferredPlaceholder = useDeferredValue(placeholder);
 
-  const defaultProps: ControlledDemoProps = {
+  const defaultProps = {
     color,
     description: deferredDescription,
     disabled,
@@ -64,7 +64,7 @@ const HomePage = () => {
     size,
     withAsterisk,
     loading,
-  };
+  } satisfies ControlledDemoProps;
 
   return (
     <>
