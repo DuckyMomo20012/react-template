@@ -75,7 +75,7 @@
 ### :camera: Screenshots
 
 <div align="center">
-  <img src="https://github.com/DuckyMomo20012/react-template/assets/64480713/7efdd81d-6a6b-41aa-8226-4fa3ea96f27e" alt="screenshot" />
+  <img src="https://github.com/DuckyMomo20012/react-template/assets/64480713/8673949a-f7b5-4ff7-8352-61b0d70dade3" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
