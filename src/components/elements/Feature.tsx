@@ -1,5 +1,3 @@
-'use client';
-
 import { Anchor, Card, Space, Stack, Text } from '@mantine/core';
 
 const Feature = ({
@@ -34,7 +32,7 @@ const Feature = ({
         </Text>
       )}
       <Space h="lg" />
-      <Stack className="">{children}</Stack>
+      <Stack>{children}</Stack>
     </Card>
   );
 };
