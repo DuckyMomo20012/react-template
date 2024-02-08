@@ -9,6 +9,7 @@ import {
   Switch,
   Text,
   TextInput,
+  useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
 import { useDeferredValue, useState } from 'react';
@@ -37,6 +38,8 @@ export type ControlledDemoProps = {
 
 const HomePage = () => {
   const themes = useMantineTheme();
+  const { setColorScheme } = useMantineColorScheme();
+
   const [color, setColor] = useState(themes.primaryColor);
   const [size, setSize] = useState<MantineSize>('sm');
   const [radius, setRadius] = useState<MantineSize>('md');
@@ -79,7 +82,7 @@ const HomePage = () => {
       <Stack className="relative">
         <Stack
           align="center"
-          className="top-[calc(var(--app-shell-header-offset,_0px)_+_var(--app-shell-padding))] z-50 w-full bg-white p-6 shadow-sm lg:sticky"
+          className="top-[calc(var(--app-shell-header-offset,_0px)_+_var(--app-shell-padding))] z-50 w-full bg-white p-6 shadow-sm dark:bg-dark-800 lg:sticky"
         >
           <SimpleGrid
             className="max-w-4xl"
@@ -121,6 +124,12 @@ const HomePage = () => {
                 <Switch
                   label="Loading"
                   onChange={(e) => setLoading(e.currentTarget.checked)}
+                />
+                <Switch
+                  label="Dark mode"
+                  onChange={(e) =>
+                    setColorScheme(e.currentTarget.checked ? 'dark' : 'light')
+                  }
                 />
               </Group>
               <Stack gap="xs">
