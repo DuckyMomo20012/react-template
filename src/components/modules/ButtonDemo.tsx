@@ -1,5 +1,3 @@
-'use client';
-
 import { Icon } from '@iconify/react';
 import { ActionIcon, Button } from '@mantine/core';
 import { memo } from 'react';

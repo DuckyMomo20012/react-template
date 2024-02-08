@@ -1,5 +1,3 @@
-'use client';
-
 import { Anchor, Card, Space, Stack, Text } from '@mantine/core';
 
 const Feature = ({
