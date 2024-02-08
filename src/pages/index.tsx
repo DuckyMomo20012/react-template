@@ -130,6 +130,9 @@ const HomePage = () => {
                   onChange={(e) =>
                     setColorScheme(e.currentTarget.checked ? 'dark' : 'light')
                   }
+                  wrapperProps={{
+                    'data-test-id': 'demo-color-scheme-toggle',
+                  }}
                 />
               </Group>
               <Stack gap="xs">
