@@ -13,7 +13,7 @@
     "test:unit": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "npx eslint --ext .jsx,.js,.tsx,.ts src/",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@iconify/react": "4.1.1",
