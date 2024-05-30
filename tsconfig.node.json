@@ -4,7 +4,14 @@
     /* If transpiling with TypeScript: */
     "composite": true,
     "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "NodeNext"
   },
-  "include": ["vite.config.ts", "tailwind.config.ts", "playwright.config.ts"]
+  "include": [
+    ".eslintrc.cjs",
+    "playwright.config.ts",
+    "postcss.config.cjs",
+    "tailwind.config.ts",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ]
 }
