@@ -13,7 +13,7 @@
     "test:unit": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "npx eslint --ext .jsx,.js,.tsx,.ts src/",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@iconify/react": "4.1.1",
@@ -46,7 +46,7 @@
     "@vitejs/plugin-react": "4.2.1",
     "@vitest/ui": "1.5.3",
     "autoprefixer": "10.4.19",
-    "eslint": "9.1.1",
+    "eslint": "8.57.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
