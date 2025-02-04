@@ -7,10 +7,8 @@
     "moduleResolution": "NodeNext"
   },
   "include": [
-    ".eslintrc.cjs",
     "playwright.config.ts",
     "postcss.config.cjs",
-    "tailwind.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
   ]
