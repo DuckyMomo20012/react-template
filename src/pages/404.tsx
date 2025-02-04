@@ -18,13 +18,9 @@ const NotFound = () => {
         <meta content="404 - Not Found" name="description" />
       </Helmet>
 
-      <Center className="h-full w-full flex-1 @container">
-        <Stack align="center" className="min-w-4/5 w-4/5 max-w-xl @lg:w-full">
-          <Image
-            alt="404"
-            className="aspect-[5/4]"
-            src="https://http.cat/404"
-          />
+      <Center className="@container h-full w-full flex-1">
+        <Stack align="center" className="w-4/5 max-w-xl min-w-4/5 @lg:w-full">
+          <Image alt="404" className="aspect-5/4" src="https://http.cat/404" />
           <Title className="text-center" order={1}>
             You have found a secret place.
           </Title>
