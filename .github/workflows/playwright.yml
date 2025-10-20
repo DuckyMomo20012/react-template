@@ -9,13 +9,13 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10
           run_install: true
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
